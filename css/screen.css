@@ -154,7 +154,6 @@ footer#pageFooter {
 footer h1 {
 	margin: 0;
 	color: #cccece;
-	//text-shadow: rgba(255,254,255,0.7) 1px 1px 0;
 	text-decoration: none;
 	font: normal 18pt "Courier New", Courier, mono;
 }
@@ -217,7 +216,6 @@ code {
 
 footer .column
 {
-//	background-color: #f00;
 	margin-top: 20pt;
 	width: 50%;
 	display: inline-block;
@@ -285,9 +283,7 @@ footer h1
 
 .card {
 	margin: 0 0 20px;
-	//font-size: 13pt;
 	overflow: visible;
-	//min-height: 150pt;
 }
 
 .card.large {
@@ -298,6 +294,7 @@ footer h1
 .card.right,
 .card.left {
 	width: 50%;
+	overflow: visible;
 }
 
 .right {
@@ -308,10 +305,6 @@ footer h1
 .left {
 	float: left;
 	clear: left;
-}
-
-.card header h1 {
-	//font-size: 18pt;
 }
 
 .card ul {
@@ -326,8 +319,13 @@ footer h1
 	margin-right: 0;
 }
 .card .categories li,
-.card .tags li {
+.card .tags li,
+.card .tags li a {
 	display: inline-block;
+	overflow: visible;
+}
+
+.card ul li {
 	overflow: visible;
 }
 
