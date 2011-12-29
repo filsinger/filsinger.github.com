@@ -63,6 +63,7 @@
 
     <footer id="pagefooter">
       <div class="stuffing">
+	{% if site.related_posts != empty %}
 	<div class="column left">
 	  <h1>Related Posts</h1>
 	  <ul class="posts">
@@ -70,8 +71,8 @@
 	    <li>&raquo;<a href="{{ post.url }}">{{ post.title }}</a></li>
 	    {% endfor %}
 	  </ul>
-
 	</div>
+	{% endif %}
       </div>
     </footer>
   </body>
