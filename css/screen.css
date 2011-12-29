@@ -36,6 +36,12 @@ header#pageheader {
 	position: absolute;
 }
 
+#pageheader img {
+	display: inline-block;
+	top: 3pt;
+	margin-right: 5pt;
+}
+
 footer,
 pre code,
 header#pageheader
