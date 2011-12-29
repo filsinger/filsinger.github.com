@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>filsinger.me - {{ page.title }}</title>
+    <link rel="stylesheet" href="/css/screen.css" media="all" type="text/css" />
+    <link rel="stylesheet" href="/css/syntax.css" media="all" type="text/css" />
+  </head>
+  <body class="categoryindex">
+
+    <header id="pageheader">
+      <div class="stuffing">
+	<a href="/">filsinger.me</a>
+      </div>
+    </header>
+    <div id="wrapper">
+
+      <article>
+      	<div id="related">
+	  <h1>Category Posts: {{ page.category | capitalize }}</h1>
+	  <ul class="posts">
+	    {% for post in site.categories[page.category] %}
+	    <li><span>{{ post.date | date_to_long_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	    {% endfor %}
+	  </ul>
+	</div>
+      </article>
+    </div>
+
+    <footer id="pagefooter">
+      <div class="stuffing">
+	<h1>Other Categories<h1>
+	    <ul class="categories">
+	    {% for c in site.categories %}
+	    {% if c[0] != page.category %}
+	    <li><a href="/categories/{{ c[0] }}/">{{ c[0] }}</a></li>
+	    {% endif %}
+	    <li><a href="/categories/{{ c[0] }}/">{{ c[0] }}</a></li>
+	    
+	    {% endfor %}
+	  </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+

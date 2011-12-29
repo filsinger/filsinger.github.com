@@ -1,0 +1,333 @@
+/* @override http://localhost:4000/css/screen.css */
+
+* {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+head {
+	display: none;
+}
+
+span, a {
+	display: inline-block;
+}
+
+html, body {
+	overflow: scroll;
+	font-family: Palatino, Georgia, "Times New Roman", Times, serif;
+	color: #222;
+	background-color: #fff;
+	font-size: 14pt;
+	margin: 0;
+}
+
+footer#pagefooter,
+header#pageheader {
+	padding: 5pt 0pt 5pt 0pt;
+	position: absolute;
+}
+
+footer,
+code,
+header#pageheader
+{
+	background-color: #222;
+	color: #eee;
+}
+
+div.stuffing,
+div#wrapper {
+	width: 730px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header#pageheader {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+div#wrapper {
+	top: 30pt;
+}
+
+header#pageheader a {
+	font-family: "Courier New", Courier, mono;
+	display: inline-block;
+	color: #eee;
+	text-decoration: none;
+	cursor: pointer;
+	font-style: normal;
+	font-weight: normal;
+}
+
+header#pageheader a:hover {
+	border: 1px solid rgba(122,174,253,0.0);
+	background-color: rgba(211,237,254,0.0);
+}
+
+article {
+	margin-top: 80px;
+	margin-bottom: 300px;
+}
+
+article header
+{
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 30pt;
+}
+
+h2 {
+	font-size: 25pt;
+	margin: 30pt 0 0 0;
+}
+
+article header h1 {
+	margin: 0 0 0 0;
+}
+
+article header time {
+	margin: 0 0 0 20;
+	color: rgba(0,0,0,0.5);
+	font-size: 16pt;
+	float: right;
+	display: inline-block;
+	cursor: default;
+	clear: right;
+}
+
+article header address {
+	float: left;
+	display: inline-block;
+	overflow: visible;
+	margin: 0 0 0 30pt;
+	font-size: 16pt;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	cursor: default;
+	clear: left;
+}
+
+article footer {
+	padding: 5 10 5 10;
+	font: 12pt "Courier New", Courier, mono;
+	text-align: center;
+	border-radius: 5pt;
+	margin: 60pt 20pt 0pt 20pt;
+	background-color: #fff;
+	color: #aaa;
+}
+
+a {
+	color: #3861ac;
+	background-color: rgba(211,237,254,0);
+	border-radius: 5px;
+	border: 1px solid rgba(122,174,253,0);
+	margin-left: -2px;
+	margin-right: -2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+a:hover {
+	border: 1px solid rgba(122,174,253,0.5);
+	background-color: rgba(211,237,254,0.25);
+}
+
+footer#pageFooter {
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	min-height: 24px;
+	padding-bottom: 20px;
+}
+
+footer h1 {
+	margin: 0;
+	color: #cccece;
+	//text-shadow: rgba(255,254,255,0.7) 1px 1px 0;
+	text-decoration: none;
+	font: normal 18pt "Courier New", Courier, mono;
+}
+
+code {
+	cursor: text;
+}
+
+#tags,
+#categories {
+	display: block;
+	padding: 2pt 0pt 2pt 0pt;
+	clear: none;
+	float: right;
+	color: rgba(0,0,0,0.5);
+}
+
+#categories {
+	float: left;
+	clear: left;
+	margin-left: 30pt;
+	visibility: hidden;
+}
+
+
+#tags ul, 
+#categories ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+#tags li,
+#categories li {
+	display: inline-block;
+	color: rgba(128,0,0,1);
+	background-color: rgba(255,0,0,0.1);
+	border: solid 1px rgba(255,0,0,0.3);
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	cursor: default;
+	opacity: 0.5;
+	font-size: 12pt;
+	padding: 2px 5px;
+}
+
+#tags li:hover,
+#categories li:hover
+{
+	opacity: 1.0;
+}
+
+#categories li.category
+{
+	color: rgba(0,128,0,1);
+	background-color: rgba(0,128,0,0.1);
+	border: solid 1px rgba(0,128,0,0.3);
+}
+
+footer .column
+{
+//	background-color: #f00;
+	margin-top: 20pt;
+	width: 50%;
+	display: inline-block;
+	top: 0;
+	bottom: 0;
+	position: static;
+}
+
+footer h1
+{
+	color: #fd5962;
+}
+
+.column.right
+{
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+#pagefooter ul {
+	padding: 0;
+	margin-top: 5pt;
+	font-size: 14pt;
+}
+
+#pagefooter ul li {
+	//color: #7ff999;
+	padding: 2pt 0 0 0;
+	color: #eee;
+}
+
+#pagefooter li a {
+	//color: #3da7fc;
+	color: #eee;
+	border: none;
+	background-color: none;
+	margin-left: 2pt;
+}
+
+#pagefooter li a:hover {
+	border: none;
+	background: none;
+}
+
+.categoryindex #pagefooter li a
+{
+	background-color: rgba(255,255,255,0.1);
+	border: 1px solid rgba(255,255,255,0.2);
+	display: inline-block;
+	padding: 2px 7px 2px 5px;
+	text-align: center;
+	min-width: 100px;
+}
+
+.categoryindex #pagefooter li a:hover
+{
+	background-color: rgba(255,255,255,0.25);
+	border: 1px solid rgba(255,255,255,0.5);
+	display: inline-block;
+	padding: 2px 7px 2px 5px;
+}
+
+.card {
+	margin: 0 0 20px;
+	//font-size: 13pt;
+	overflow: visible;
+	//min-height: 150pt;
+}
+
+.card.large {
+	clear: both;
+	text-align: left;
+}
+
+.card.right,
+.card.left {
+	width: 50%;
+}
+
+.right {
+	float: right;
+	clear: right;
+}
+
+.left {
+	float: left;
+	clear: left;
+}
+
+.card header h1 {
+	//font-size: 18pt;
+}
+
+.card ul {
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+.card .stuffing {
+	width: 300px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.card .categories li,
+.card .tags li {
+	display: inline-block;
+	overflow: visible;
+}
+

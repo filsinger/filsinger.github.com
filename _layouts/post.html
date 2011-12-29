@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>filsinger.me - {{ page.title }}</title>
+    <link rel="stylesheet" href="/css/screen.css" media="all" type="text/css" />
+    <link rel="stylesheet" href="/css/syntax.css" media="all" type="text/css" />
+  </head>
+  <body>
+
+    <header id="pageheader">
+      <div class="stuffing">
+	<a href="/">filsinger.me</a>
+      </div>
+    </header>
+    <div id="wrapper">
+      <article>
+	<header>
+	  <h1>{{ page.title }}</h1>
+	  <address>By <a href="/">Jason Filsinger</a></address>
+	  <time>{{ page.date | date_to_long_string }}</time>
+	  <div id="categories">
+	       <ul>
+		 {% for c in page.categories %}
+		 <li class="category">{{ c }}</li>
+		 {% endfor %}
+	       </ul>
+          </div>
+	  <div id="tags">
+	       <ul>
+		 {% for t in page.tags %}
+		 <li class="tag">{{ t }}</li>
+		 {% endfor %}
+	       </ul>
+          </div>
+	</header>
+	<section>
+	  {{ content }}
+	</section>
+	<footer>
+	  Thank you for reading.
+	</footer>
+      </article>
+    </div>
+
+    <footer id="pagefooter">
+      <div class="stuffing">
+	<div class="column left">
+	  <h1>Related Posts</h1>
+	  <ul class="posts">
+	    {% for post in site.related_posts limit:3 %}
+	    <li>&raquo;<a href="{{ post.url }}">{{ post.title }}</a></li>
+	    {% endfor %}
+	  </ul>
+
+	</div>
+      </div>
+    </footer>
+  </body>
+</html>
+

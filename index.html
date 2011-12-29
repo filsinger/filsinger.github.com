@@ -1,0 +1,46 @@
+---
+layout: simple
+title: Jason Filsinger
+---
+
+<article>
+
+<section class="left card">
+  <div class="stuffing">
+    <img src="/images/logo.png"/>
+  </div>
+</section>
+
+
+<section class="right card">
+  <header>
+    <h1>About Me</h1>
+  </header>
+  Game developer, programmer, photographer, zombie food.
+</section>
+
+<section class="right card">
+  <header>
+    <h1>Social</h1>
+  </header>
+  <ul>
+    <li><a href="http://twitter.com/filsinger">Twitter</a></li>
+    <li><a href="http://github.com/filsinger">GitHub</a></li>
+    <li><a href="http://flickr.com/filsinger">Flickr</a></li>
+  </ul>
+</section>
+
+
+
+<section class="large card">
+  <header>
+    <h1>Posts</h1>
+  </header>
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+
