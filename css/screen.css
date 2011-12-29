@@ -6,12 +6,19 @@
 	position: relative;
 }
 
-head {
+head, script {
 	display: none;
 }
 
-span, a {
-	display: inline-block;
+span, a, em, strong, code {
+	display: inline;
+}
+
+p {
+}
+
+code {
+	font-size: 16px;
 }
 
 html, body {
@@ -30,7 +37,7 @@ header#pageheader {
 }
 
 footer,
-code,
+pre code,
 header#pageheader
 {
 	background-color: #222;
@@ -52,6 +59,7 @@ header#pageheader {
 
 div#wrapper {
 	top: 30pt;
+	margin-bottom: 200px;
 }
 
 header#pageheader a {
@@ -71,7 +79,26 @@ header#pageheader a:hover {
 
 article {
 	margin-top: 80px;
-	margin-bottom: 300px;
+}
+
+#comments {
+	margin-top: 100px;
+	
+}
+
+#disqus_thread {
+	min-height: 100px;
+	background-color: #222;
+	border-radius: 10pt;
+	overflow: hidden;
+}
+
+a.dsq-brlink {
+	margin-top: 10pt;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 article header
@@ -81,6 +108,8 @@ article header
 
 h1 {
 	font-size: 30pt;
+	margin-top: 50pt;
+	margin-bottom: 10px;
 }
 
 h2 {
@@ -88,6 +117,14 @@ h2 {
 	margin: 30pt 0 0 0;
 }
 
+h3 {
+	margin-bottom: 0;
+}
+
+h4 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
 article header h1 {
 	margin: 0 0 0 0;
 }
@@ -158,8 +195,14 @@ footer h1 {
 	font: normal 18pt "Courier New", Courier, mono;
 }
 
-code {
+pre code {
 	cursor: text;
+	display: block;
+	margin: 0px 20pt 0 20pt;
+	padding: 10px 20px 15px 20px;
+	border-radius: 10px;
+	font-size: 14px;
+	overflow: scroll;
 }
 
 #tags,
@@ -329,3 +372,8 @@ footer h1
 	overflow: visible;
 }
 
+li {
+	display: block;
+	list-style-type: disc;
+	list-style-position: outside;
+}
