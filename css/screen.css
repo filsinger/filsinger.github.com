@@ -83,14 +83,15 @@ article {
 
 #comments {
 	margin-top: 100px;
-	
+	border-top: dashed 1px rgba(0,0,0,0.2);
 }
 
-#disqus_thread {
-	min-height: 100px;
-	background-color: #222;
-	border-radius: 10pt;
-	overflow: hidden;
+.dsq-subscribe-rss,
+.dsq-subscribe-email {
+	display: none;
+}
+.dsq-trackback-url{
+//	display: none;
 }
 
 a.dsq-brlink {
@@ -99,6 +100,14 @@ a.dsq-brlink {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	color: #222;
+	width: 200px;
+}
+
+a.dsq-brlink:hover
+{
+	border-color: rgba(0,0,0,0);
+	background: none;
 }
 
 article header
