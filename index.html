@@ -11,7 +11,6 @@ title: Jason Filsinger
   </div>
 </section>
 
-
 <section class="right card">
   <header>
     <h1>About Me</h1>
@@ -30,8 +29,7 @@ title: Jason Filsinger
   </ul>
 </section>
 
-
-
+{% if site.posts != empty %}
 <section class="large card">
   <header>
     <h1>Posts</h1>
@@ -42,5 +40,5 @@ title: Jason Filsinger
     {% endfor %}
   </ul>
 </section>
-
+{% endif %}
 
