@@ -76,7 +76,7 @@ git submodule update --init
 git add submodules/markdown-mode
 {% endif %}
 {% endhighlight %}
-"**`git submodule add git://jblevins.org/git/markdown-mode.git submodules/markdown-mode`**" - adds a `markdown-mode` submodule repository to the `~/.emacs.git/submodules/` folder and addes information about the submodule to `.gitmodules`.
+"**`git submodule add git://jblevins.org/git/markdown-mode.git submodules/markdown-mode`**" - adds a `markdown-mode` submodule repository to the `~/.emacs.git/submodules/` folder and adds information about the submodule to `.gitmodules`.
 
 {% if false %}
 "**`git submodule update --init`**" - Initialize the submodule and pull the latest `HEAD` from the remote server.
