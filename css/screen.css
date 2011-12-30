@@ -403,3 +403,9 @@ footer h1
 	display: inline-block;
 	float: right;
 }
+
+.social a,
+.social a:hover {
+	background-color: none;
+	border: none;
+}
