@@ -402,6 +402,7 @@ footer h1
 .social {
 	display: inline-block;
 	float: right;
+	margin-top: 50px;
 }
 
 .social a,
