@@ -399,3 +399,7 @@ footer h1
 	overflow: visible;
 }
 
+.social {
+	display: inline-block;
+	float: right;
+}
