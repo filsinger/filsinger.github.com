@@ -14,6 +14,19 @@ span, a, em, strong, code {
 	display: inline;
 }
 
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+li {
+	overflow: visible;
+	display: list-item;
+}
+
 p {
 }
 
@@ -302,13 +315,12 @@ footer h1
 }
 
 #pagefooter ul li {
-	//color: #7ff999;
+	list-style: none;
 	padding: 2pt 0 0 0;
 	color: #eee;
 }
 
 #pagefooter li a {
-	//color: #3da7fc;
 	color: #eee;
 	border: none;
 	background-color: none;
@@ -364,9 +376,11 @@ footer h1
 	clear: left;
 }
 
-.card ul {
+.card ul,
+.card ol {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 	overflow: visible;
 }
 
@@ -376,7 +390,6 @@ footer h1
 	margin-right: 0;
 }
 .card .categories li,
-.card .tags li,
 .card .tags li a {
 	display: inline-block;
 	overflow: visible;
@@ -386,8 +399,3 @@ footer h1
 	overflow: visible;
 }
 
-li {
-	display: block;
-	list-style-type: disc;
-	list-style-position: outside;
-}
