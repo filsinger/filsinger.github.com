@@ -23,7 +23,7 @@ It's the perfect solution for managing my emacs config.
 
 
 ##The Structure
-Currently, my emacs config folders exist in `~/.emacs.git/` on OS X, and in `%USERPROFILE%/.emacs.git/` on Windows. (_I
+Currently, my emacs config folder exists in `~/.emacs.git/` on OS X, and in `%USERPROFILE%/.emacs.git/` on Windows. (_I
 might change this in the near future; place everything within the `~/.emacs.d` folder_)
 
 Let's take a look at the directory structure I have in my `~/.emacs.git/` folder (_it's a pretty simple structure_).
@@ -43,7 +43,7 @@ I made the decision early-on to take advantage of git submodules; every emacs ex
 has a git repository somewhere (_so why not take advantage_).   Submodules also allow me to make my config
 public by moving work-related things into a private submodule.
 
-The `common-init.el` is loaded from the `~/.emacs` file (with an extra variable, `emacs-sync-path`, defined before loading the `common-init.el`.
+The `common-init.el` is loaded from my `~/.emacs` file (with an extra variable, `emacs-sync-path`, defined before loading the `common-init.el`.
 
 Here is my `~/.emacs`:
 {% highlight cl %}
@@ -90,7 +90,7 @@ git add submodules/markdown-mode
 {% endif %}
 
 ### Using the Submodule
-Using the `emacs-sync-path` variable that was defined within the `~/.emacs` file, I add the `markdown-mode` submodule
+Taking advantage of the `emacs-sync-path` variable that was defined within the `~/.emacs` file, I add the `markdown-mode` submodule
 path to the emacs `load-path` within my `common-init.el` file.
 {% highlight cl %}
 (add-to-list 'load-path (concat emacs-sync-path "/submodules/markdown-mode"))
@@ -116,9 +116,25 @@ don't initialize to a branch_)
 
 "**`git submodule foreach git pull`**" - loops through all of the submodules and pulls in the latest changes from their remote repository (_I pull because I don't make changes to the submodules_)
 
+### Cloning
+Eventually you might need to clone your emacs config superproject on a new computer.  There are a couple extra steps that
+need to be executed when cloning a repository that contains submodules.
 
-## The Rest of the Config
-For the most part my `common-init.el` emacs config just loads extensions from submodules and modifying some settings.
+{% highlight bash %}
+git clone <source_repository> <target_directory>
+git submodule update --init
+{% endhighlight %}
+
+"**`git clone`** _<source\_repository> <target\_directory>_" - Just your standard issue git clone.
+"**`git submodule update --init`**" - Tells git to initialize and update the submodules required by the superproject.
+
+### More Information about Submodules
+Git submodules are powerful but they can be a little confusing when you're just starting out.  If you're new to submodules 
+I highly recommend taking the time to learn and understand them. [ProGit](http://progit.org/book/) has
+a [chapter](http://progit.org/book/ch6-6.html) dedicated to submodules.
+
+## The Remainder of the Config
+For the most part my `common-init.el` emacs config just loads extensions from submodules and modifies some settings.
 If you're interested in seeing it,  you can find it [here](https://github.com/filsinger/emacs-config/blob/master/common-init.el)
 
 
@@ -132,12 +148,13 @@ Here is a summary of what it contains:
 * **auto-completion dictionaries** (_For the scripting language we use at work_)
 * **functions** (_for calling external work tools/scripts from within emacs_)
 
+I might talk about some of the things I do at work with emacs in a future post.
+
 ## Wrapping It Up
-Overall,  I'm content with my emacs setup.  Using submodules allows me to take advantage of the various
-submodules on all the computers I use with minimal maintenance. I'm able to update all of the submodules
+Overall,  I'm content with my emacs setup.  Using submodules allows me to take advantage of various
+emacs extensions on all the computers I use with minimal maintenance. I'm able to update all of the submodules
 with just a few shell commands which leaves me with just one file (_the `common-init.el`_) to maintain.
 
 You can find my [emacs config repository](https://github.com/filsinger/emacs-config) on [GitHub](https://github.com).
-
 
 
