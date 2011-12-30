@@ -135,11 +135,11 @@ a [chapter](http://progit.org/book/ch6-6.html) dedicated to submodules.
 
 ## The Remainder of the Config
 For the most part my `common-init.el` emacs config just loads extensions from submodules and modifies some settings.
-If you're interested in seeing it,  you can find it [here](https://github.com/filsinger/emacs-config/blob/master/common-init.el)
+If you're interested in seeing it,  you can find it [here](https://github.com/filsinger/emacs-config/blob/master/common-init.el).
 
 
 ## The Work/Life Balance 
-Like I mentioned earlier, one of the submodules is a private repository containing all of my work related emacs config options.
+Like I mentioned earlier, one of the submodules is a private repository containing all of my work-related emacs config options.
 
 Here is a summary of what it contains:
 
