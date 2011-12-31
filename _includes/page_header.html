@@ -15,6 +15,13 @@
 
 <header id="pageheader">
   <div class="stuffing">
-    <a href="/"><img src="/images/logo-small-w.png"/> filsinger.me</a>
+    <div id="sitelogo">
+      <a href="/">filsinger.me</a>
+    </div>
+  {% if page.category != null %}
+    <div id="category">
+      <a href="{% category_url page.category %}">{{ page.category }}</a>
+    </div>
+  {% endif %}
   </div>
 </header>

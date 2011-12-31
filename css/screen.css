@@ -61,32 +61,80 @@ header#pageheader
 	color: #eee;
 }
 
+#pageheader,
+article #tags,
+article #categories,
+.social,
+#disqus_thread {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
 /* @group Page Header & Footer */
 
 footer#pagefooter,
 header#pageheader {
-	padding: 5pt 0pt 5pt 0pt;
 	position: absolute;
 	left: 0px;
 	right: 0px;
-}
-
-removethis header#pageheader {
-	top: 0px;
+	min-height: 40px;
 }
 
 /* @group Header */
+#pageheader {
+	height: 30px;
+	font-family: "Courier New", Courier, mono;
+	overflow: visible;
+	z-index: 10;
+	//position: absolute;
+	
+}
+
+#pageheader a {
+	display: inline-block;
+	color: #eee;
+	text-decoration: none;
+}
+
+#sitelogo {
+	float: left;
+}
+
+#pageheader .stuffing{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	overflow: visible;
+}
+
+#sitelogo a {
+	background: url(../images/logo-small-w.png) no-repeat 0;
+	padding-left: 30px;
+	padding-top: 2px;
+	
+	color: #eee;
+	text-decoration: none;
+}
+
+#pageheader #category {
+	float: right;
+}
+
+#pageheader #category a {
+	opacity: 0.5;
+}
+
+#pageheader #category a:hover {
+	opacity: 1.0;
+}
 #pageheader img {
 	display: inline-block;
 	top: 3pt;
 }
 
-header#pageheader a {
-	font-family: "Courier New", Courier, mono;
-	display: inline-block;
-	color: #eee;
-	text-decoration: none;
-}
+
 
 /* @end Header */
 
@@ -394,6 +442,16 @@ article li.category
 
 /* @group Social Networking */
 
+.license {
+	display: inline-block;
+	margin-top: 50px;
+	float: left;
+}
+
+.license a {
+	display: inline-block;
+}
+
 .social {
 	display: inline-block;
 	float: right;
@@ -407,3 +465,14 @@ article li.category
 }
 
 /* @end */
+
+.tooltip {
+	background-color: rgba(0,0,0,0.8);
+	color: #999;
+	font-size: 10pt;
+	opacity: 0.2;
+}
+
+.tooltiptrigger:hover~.tooltip {
+	opacity: 1.0;
+}
