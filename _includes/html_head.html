@@ -7,4 +7,7 @@
 
   <meta name="robots" content="noodp, noydir" />
   {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
+  {% if page.comments != null %}
+  <link rel="stylesheet" href="/css/comments.css" media="all" type="text/css" />
+  {% endif %}
 </head>

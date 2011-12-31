@@ -8,11 +8,11 @@
 	<header>
 	  <h1>{{ page.title }}</h1>
 	  <address>By <a href="/">Jason Filsinger</a></address>
-	  <time>{{ page.date | date_to_long_string }}</time>
+	  <time class="right">{{ page.date | date_to_long_string }}</time>
 	  <div id="categories">
 	    <ul>
 	      {% for c in page.categories %}
-	      <li class="category">{{ c }}</li>
+	      <li class="category"><a href="{% category_url c %}">{{ c }}</a></li>
 	      {% endfor %}
 	    </ul>
           </div>
@@ -38,7 +38,7 @@
 	  </div>
       </div>
       {% if page.comments != null %}
-      <div id="comments">
+      
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 	  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -52,8 +52,8 @@
 	  })();
 	</script>
 	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-      </div>
+<!--	<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>-->
+
       {% endif %}
     </div>
 
