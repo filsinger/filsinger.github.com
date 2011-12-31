@@ -1,0 +1,88 @@
+<footer id="pagefooter">
+  <div class="stuffing">
+    
+    {% if site.related_posts != null %}
+    {% if site.related_posts != empty %}
+    <div class="column left">
+      <div class="block">
+	<h1>Related Posts</h1>
+	<ul class="posts">
+	  {% for post in site.related_posts limit:3 %}
+	  <li>&raquo;<a href="{{ post.url }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
+      </div>
+    </div>
+    {% endif %}
+    {% endif %}
+
+    {% if page.license != null %}
+    <div class="column left">
+      <div class="block" id="license">
+	{% case page.license %}
+	{% when "cc-by-nc-sa" %}
+	<h1>License</h1>
+	<img src="http://static.filsinger.me/icons/CreativeCommons/cc.64.white.png"/>
+	<p>
+	  This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a 
+	  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+	</p>
+	{% when "copyright" %}
+	<h1>Copyright</h1>
+	This work is Copyright 2011-2012 by Jason Filsinger. All Rights Reserved.
+	{% else %}
+	<h1>License</h1>
+	<img src="http://static.filsinger.me/icons/CreativeCommons/cc.64.white.png"/>
+	<p>
+	  This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a 
+	  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+	</p>
+	{% endcase %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if page.categories != null %}
+    {% if page.categories != empty %}
+    <div class="column right">
+      <div class="block" id="categories">
+	<h1>Category</h1>
+	<ul>
+	  {% for c in page.categories %}
+	  <li><a href="{% category_url c %}">{{ c }}</a></li>
+	  {% endfor %}
+	</ul>
+      </div>
+    </div>
+    {% endif %}
+    {% endif %}
+
+
+
+
+    {% if page.tags != null %}
+    {% if page.tags != empty %}
+    <div class="column right">
+      <div class="block" id="tags">
+	<h1>Tags</h1>
+	<ul id="tags">
+	  {% for t in page.tags %}
+	  <li>{{ t }}</li>
+	  {% endfor %}
+	</ul>
+      </div>
+    </div>
+    {% endif %}
+    {% endif %}
+
+    <div class="row" id="commoninfo">
+      <ul class="row" id="commoninfo">
+	<li><a href="/">home</a></li>
+	<li><a href="#top">top</a></li>
+	<li><a href="/about/">about me</a></li>
+	<li><a href="/about/credits.html">site credits</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>

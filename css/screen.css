@@ -43,6 +43,10 @@ html, body {
 	margin: 0;
 }
 
+#wrapper {
+	min-height: 400px;
+}
+
 .right {
 	float: right;
 	clear: right;
@@ -53,7 +57,7 @@ html, body {
 	clear: left;
 }
 
-footer,
+footer#pagefooter,
 pre code,
 header#pageheader
 {
@@ -65,7 +69,8 @@ header#pageheader
 article #tags,
 article #categories,
 .social,
-#disqus_thread {
+#disqus_thread,
+#pagefooter {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
@@ -77,20 +82,20 @@ article #categories,
 
 footer#pagefooter,
 header#pageheader {
-	position: absolute;
 	left: 0px;
 	right: 0px;
 	min-height: 40px;
 }
 
+
+
 /* @group Header */
 #pageheader {
+	position: absolute;
 	height: 30px;
 	font-family: "Courier New", Courier, mono;
 	overflow: visible;
 	z-index: 10;
-	//position: absolute;
-	
 }
 
 #pageheader a {
@@ -163,7 +168,6 @@ div#wrapper {
 
 div#wrapper {
 	top: 30pt;
-	margin-bottom: 200px;
 }
 
 /* @end */
@@ -277,6 +281,30 @@ article #tags {
 	clear: none;
 }
 
+article #tags li {
+	overflow: visible;
+}
+article #tags:before {
+	background: url(http://static.filsinger.me/icons/DefaultIcon/16x16/tag.png) no-repeat right 4px;
+	width: 20px;
+	display: inline-block;
+	content: ".";
+	color: transparent;
+	opacity: 0.1;
+	top: -1px;
+	height: 20px;
+	position: relative;
+}
+
+article #tags:hover li:before
+{
+	opacity: 1.0;
+}
+article #tags:hover {
+	width: auto;
+	opacity: 1.0;
+}
+
 article #categories {
 	clear: left;
 	float: left;
@@ -286,7 +314,7 @@ article #categories {
 article #tags,
 article #categories {
 	display: block;
-	padding: 2pt 0pt 2pt 0pt;
+	//padding: 2pt 0pt 2pt 0pt;
 	color: rgba(0,0,0,0.5);
 }
 
@@ -310,9 +338,9 @@ article #categories ul a:hover {
 article li.tag,
 li.category {
 	display: inline-block;
-	color: rgba(128,0,0,1);
-	background-color: rgba(255,0,0,0.1);
-	border: solid 1px rgba(255,0,0,0.3);
+	//color: rgba(128,0,0,1);
+	//background-color: rgba(255,0,0,0.1);
+	//border: solid 1px rgba(255,0,0,0.3);
 	border-radius: 5px;
 	display: inline-block;
 	text-decoration: none;
@@ -325,7 +353,7 @@ li.category {
 article li.tag:hover,
 article li.category:hover
 {
-//	opacity: 1.0;
+
 }
 
 article li.category
@@ -349,11 +377,6 @@ article li.category
 	position: static;
 }
 
-#pagefooter h1
-{
-	color: #fd5962;
-}
-
 #pagefooter ul {
 	padding: 0;
 	margin-top: 5pt;
@@ -363,7 +386,6 @@ article li.category
 #pagefooter ul li {
 	list-style: none;
 	padding: 2pt 0 0 0;
-	color: #eee;
 }
 
 #pagefooter li a {
@@ -379,31 +401,6 @@ article li.category
 }
 
 /* @end */
-
-/* @group Category Index */
-
-/* @group Page Footer */
-
-.categoryindex #pagefooter li a
-{
-	background-color: rgba(255,255,255,0.1);
-	border: 1px solid rgba(255,255,255,0.2);
-	display: inline-block;
-	padding: 2px 7px 2px 5px;
-	text-align: center;
-	min-width: 100px;
-}
-
-.categoryindex #pagefooter li a:hover
-{
-	background-color: rgba(255,255,255,0.25);
-	border: 1px solid rgba(255,255,255,0.5);
-	display: inline-block;
-	padding: 2px 7px 2px 5px;
-}
-
-/* @end Page Footer */
-/* @end Category Index */
 
 /* @group Index Page Cards */
 
@@ -476,3 +473,102 @@ article li.category
 .tooltiptrigger:hover~.tooltip {
 	opacity: 1.0;
 }
+
+
+
+
+/* @group Page Footer */
+
+#pagefooter,
+#pagefooter li {
+	font: 11pt "Courier New", Courier, mono;
+	color: #888;
+}
+
+#pagefooter h1 {
+	padding: 0;
+	cursor: default;
+	color: rgba(253,89,98,0.6);
+	margin: 0 0 5px;
+}
+
+#pagefooter li a,
+#pagefooter a {
+	color: rgba(153,191,253,0.6);
+	text-decoration: none;
+}
+
+#pagefooter li a:hover,
+#pagefooter a:hover {
+	color: rgba(153,191,253,1.0);
+	text-decoration: none;
+}
+
+#pagefooter .block {
+	left: 0;
+	display: block;
+	//padding: 0 0 20px;
+	margin: 0;
+}
+
+#pagefooter .row {
+	display: block;
+	clear: both;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#pagefooter .column {
+	margin-bottom: 0px;
+}
+
+#pagefooter .column:empty,
+#pagefooter .row:empty {
+	display: none;
+}
+
+#pagefooter #license img {
+	opacity: 0.1;
+	float: left;
+	margin-right: 10px;
+	width: 64px;
+}
+
+#pagefooter #license p {
+	margin: 8px 0 0;
+}
+
+#pagefooter #commoninfo {
+	cursor: default;
+}
+
+#pagefooter #commoninfo ul {
+	display: block;
+}
+
+#pagefooter ul#commoninfo li:before ,
+#pagefooter ul#commoninfo li:after {
+	content: "|";
+	color: #555;
+}
+#pagefooter ul#commoninfo li {
+	display: inline-block;
+}
+
+#pagefooter .column.left
+{
+	width: 560px;
+}
+
+#pagefooter .column.right
+{
+	width: 150px;
+}
+
+#pagefooter ul,
+#pagefooter ul li {
+	padding: 0;
+	margin: 0;	
+}
+
+/* @end Page Footer */

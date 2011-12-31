@@ -5,6 +5,7 @@ tags: ['emacs', 'git']
 category: workflow
 comments: false
 meta-description: "Jason Filsinger discusses how he uses git to keep his emacs configuration in sync between various computers."
+license: "cc-by-nc-sa"
 ---
 Emacs is an amazing editor; it can be simple, complex, overwhelming, and powerful.
 

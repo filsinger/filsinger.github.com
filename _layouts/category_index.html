@@ -1,11 +1,8 @@
 <html>
   {% include html_head.html %}
   <body class="categoryindex">
-    <header id="pageheader">
-      <div class="stuffing">
-	<a href="/">filsinger.me</a>
-      </div>
-    </header>
+    {% include page_header.html %}
+
     <div id="wrapper">
 
       <article>
@@ -20,20 +17,7 @@
       </article>
     </div>
 
-    <footer id="pagefooter">
-      <div class="stuffing">
-	<h1>Other Categories<h1>
-	    <ul class="categories">
-	    {% for c in site.categories %}
-	    {% if c[0] != page.category %}
-	    <li><a href="/categories/{{ c[0] }}/">{{ c[0] }}</a></li>
-	    {% endif %}
-	    <li><a href="/categories/{{ c[0] }}/">{{ c[0] }}</a></li>
-	    
-	    {% endfor %}
-	  </ul>
-      </div>
-    </footer>
+    {% include page_footer.html %}
   </body>
 </html>
 
