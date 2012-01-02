@@ -3,7 +3,6 @@
 * {
 	display: block;
 	overflow: hidden;
-	//position: relative;
 }
 
 html {
@@ -15,7 +14,7 @@ head, script {
 	display: none;
 }
 
-span, a, em, strong, code {
+span, a, em, strong, code, time {
 	display: inline;
 }
 
@@ -98,7 +97,7 @@ header#pageheader {
 #pageheader {
 	position: absolute;
 	height: 30px;
-	font-family: "Courier New", Courier, mono;
+	font-family: "Courier New", Courier, mono, monospace;
 	overflow: visible;
 	z-index: 10;
 }
@@ -234,7 +233,7 @@ article header address {
 
 article footer {
 	padding: 5 10 5 10;
-	font: 12pt "Courier New", Courier, mono;
+	font: 12pt "Courier New", Courier, mono, monospace;
 	text-align: center;
 	border-radius: 5pt;
 	margin: 60pt 20pt 0pt 20pt;
@@ -264,7 +263,7 @@ footer h1 {
 	margin: 0;
 	color: #cccece;
 	text-decoration: none;
-	font: normal 18pt "Courier New", Courier, mono;
+	font: normal 18pt "Courier New", Courier, mono, monospace;
 }
 
 /* @group Code */
@@ -456,7 +455,7 @@ article li.category {
 
 #pagefooter,
 #pagefooter li {
-	font: 11pt "Courier New", Courier, mono;
+	font: 11pt "Courier New", Courier, mono, monospace;
 	color: #888;
 }
 
@@ -482,7 +481,6 @@ article li.category {
 #pagefooter .block {
 	left: 0;
 	display: block;
-	//padding: 0 0 20px;
 	margin: 0;
 }
 
