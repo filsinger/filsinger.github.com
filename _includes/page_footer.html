@@ -1,8 +1,6 @@
 <footer id="pagefooter">
   <div class="stuffing">
-    
-    {% if site.related_posts != null %}
-    {% if site.related_posts != empty %}
+    {% if site.related_posts != null %} {% if site.related_posts != empty %}
     <div class="column left">
       <div class="block">
 	<h1>Related Posts</h1>
@@ -13,8 +11,7 @@
 	</ul>
       </div>
     </div>
-    {% endif %}
-    {% endif %}
+    {% endif %} {% endif %}
 
     {% if page.license != null %}
     <div class="column left">
@@ -42,8 +39,7 @@
     </div>
     {% endif %}
 
-    {% if page.categories != null %}
-    {% if page.categories != empty %}
+    {% if page.categories != null %} {% if page.categories != empty %}
     <div class="column right">
       <div class="block" id="categories">
 	<h1>Category</h1>
@@ -54,14 +50,9 @@
 	</ul>
       </div>
     </div>
-    {% endif %}
-    {% endif %}
+    {% endif %} {% endif %}
 
-
-
-
-    {% if page.tags != null %}
-    {% if page.tags != empty %}
+    {% if page.tags != null %} {% if page.tags != empty %}
     <div class="column right">
       <div class="block" id="tags">
 	<h1>Tags</h1>
@@ -72,17 +63,13 @@
 	</ul>
       </div>
     </div>
-    {% endif %}
-    {% endif %}
+    {% endif %} {% endif %}
 
-    <div class="row" id="commoninfo">
-      <ul class="row" id="commoninfo">
-	<li><a href="/">home</a></li>
-	<li><a href="#top">top</a></li>
-	<li><a href="/about/">about me</a></li>
-	<li><a href="/about/credits.html">site credits</a></li>
-      </ul>
-    </div>
-
+    <ul class="row" id="commoninfo">
+      <li><a href="/">home</a></li>
+      <li><a href="#top">top</a></li>
+      <li><a href="/about/">about me</a></li>
+      <li><a href="/about/credits.html">site credits</a></li>
+    </ul>
   </div>
 </footer>

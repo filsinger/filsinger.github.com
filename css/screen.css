@@ -538,12 +538,9 @@ article li.category
 	margin: 8px 0 0;
 }
 
-#pagefooter #commoninfo {
-	cursor: default;
-}
-
-#pagefooter #commoninfo ul {
+#pagefooter ul#commoninfo {
 	display: block;
+	cursor: default;
 }
 
 #pagefooter ul#commoninfo li:before ,
