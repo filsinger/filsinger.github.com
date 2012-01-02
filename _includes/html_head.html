@@ -4,33 +4,23 @@
   <link rel="stylesheet" href="/css/syntax.css" media="all" type="text/css" />
   <link rel="alternate" type="application/rss+xml" title="filsinger.me" href="/feed/rss.xml" />
   <link rel="alternate" type="application/atom+xml" title="filsinger.me" href="/feed/atom.xml" />
-
   <link rel="icon" type="image/png" href="http://static.filsinger.me/favicon.png" />
 
   <meta name="author" content="Jason Filsinger"/>
-  <meta http-equiv="content-language" content="en-US"/>
-  
   <meta charset="utf-8">
   <meta name="robots" content="noodp, noydir{% if page.noindex == true %}, noindex{% endif %}" />
   {% if page.noindex == true %}<meta name="googlebot" content="noarchive"/>{% endif %}
   {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
   {% if page.comments != null %}<link rel="stylesheet" href="/css/comments.css" media="all" type="text/css" />{% endif %}
-
   {% case page.license %}
-  {% when "cc-by-nc-sa" %}
-  <meta name="copyright" content="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License." />
-  {% when "copyright" %}
-  <meta name="copyright" content="&copy; 2011-2012 Jason Filsinger" />
-  {% else %}
-  {% endcase %}
-
+  {% when "cc-by-nc-sa" %}<meta name="copyright" content="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License." />
+  {% when "copyright" %}<meta name="copyright" content="&copy; 2011-2012 Jason Filsinger" />
+  {% else %}{% endcase %}
   <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming">
-
 
   <!-- IOS meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-startup-image" href="/images/startup.png">
   <link rel="apple-touch-icon-precomposed" href="http://static.filsinger.me/ios.png" />
-
 </head>
