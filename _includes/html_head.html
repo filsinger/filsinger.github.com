@@ -5,10 +5,22 @@
   <link rel="alternate" type="application/rss+xml" title="filsinger.me" href="/feed/rss.xml" />
   <link rel="alternate" type="application/atom+xml" title="filsinger.me" href="/feed/atom.xml" />
 
+  <meta name="author" content="Jason Filsinger"/>
+  <meta http-equiv="content-language" content="en-US"/>
+  
   <meta charset="utf-8">
-  <meta name="robots" content="noodp, noydir" />
+  <meta name="robots" content="noodp, noydir{% if page.noindex == true %}, noindex{% endif %}" />
+  {% if page.noindex == true %}<meta name="googlebot" content="noarchive"/>{% endif %}
   {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
-  {% if page.comments != null %}
-  <link rel="stylesheet" href="/css/comments.css" media="all" type="text/css" />
-  {% endif %}
+  {% if page.comments != null %}<link rel="stylesheet" href="/css/comments.css" media="all" type="text/css" />{% endif %}
+
+  {% case page.license %}
+  {% when "cc-by-nc-sa" %}
+  <meta name="copyright" content="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License." />
+  {% when "copyright" %}
+  <meta name="copyright" content="&copy; 2011-2012 Jason Filsinger" />
+  {% else %}
+  {% endcase %}
+
+  <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming">
 </head>
