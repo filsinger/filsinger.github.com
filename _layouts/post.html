@@ -9,8 +9,8 @@
 	<header>
 	  <h1>{{ page.title }}</h1>
 	  <address>By <a href="/">Jason Filsinger</a></address>
-	  <time class="right" pubdate="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
-	  <ul id="tags" class="tags">{% for t in page.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
+	  <time class="right" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+	  <ul class="tags">{% for t in page.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
 	</header>
 	<section>
 	  {{ content }}

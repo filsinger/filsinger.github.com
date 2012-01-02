@@ -39,7 +39,7 @@
 
     {% if page.categories != null %} {% if page.categories != empty %}
     <div class="column right">
-      <div class="block" id="categories">
+      <div class="block">
 	<h1>Category</h1>
 	<ul>
 	  {% for c in page.categories %}
@@ -52,9 +52,9 @@
 
     {% if page.tags != null %} {% if page.tags != empty %}
     <div class="column right">
-      <div class="block" id="tags">
+      <div class="block">
 	<h1>Tags</h1>
-	<ul id="tags">
+	<ul>
 	  {% for t in page.tags %}
 	  <li>{{ t }}</li>
 	  {% endfor %}
