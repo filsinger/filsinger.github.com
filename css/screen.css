@@ -546,3 +546,83 @@ article li.category {
 }
 
 /* @end Page Footer */
+
+div.big.logo
+{
+	background: url(http://static.filsinger.me/images/logo.png) no-repeat center center;
+}
+
+
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+	body { width: 768px; }
+
+	div.stuffing, 
+	div#wrapper,
+	{
+		width: 730px;
+	}
+	
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+	body {
+		width: 1024px;
+	}
+	
+	div.stuffing,
+	div#wrapper {
+		width: 1004px;
+	}
+}
+
+
+
+@media only screen and (max-width: 480px) {
+	body,
+	#pagefooter .row,
+	#pagefooter .column.left,
+	#pagefooter .column.right {
+		width: 100%;
+	}
+
+	div.stuffing,
+	div#wrapper,
+	.card,
+	.card.left,
+	.card.right,
+	.card.large {
+		width: 300px;
+	}
+
+	article .card img,
+	div.big.logo,
+	ul.posts li span,
+	#pagefooter #license.block img {
+		display: none;
+	}
+
+	.card.left,
+	.card.right,
+	.card.large,
+	#pagefooter .column.left,
+	#pagefooter .column.right,
+	time.right {
+		float: none;
+	}
+
+	body, time, code, time.right, article header address, pre code, #pagefooter, #pagefooter li {
+		font-size: 12pt;
+	}
+
+	
+	h1 { font-size: 16pt; }
+	h2 { font-size: 15pt; }
+	h3 { font-size: 14pt; }
+	h4 { font-size: 13pt; }
+	h5 { font-size: 12pt; }
+	
+	#wrapper { min-height: 0px; }
+	article header address,
+	pre code { margin: 0; }
+}

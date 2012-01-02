@@ -6,7 +6,6 @@
   <link rel="alternate" type="application/atom+xml" title="filsinger.me" href="/feed/atom.xml" />
 
   <link rel="icon" type="image/png" href="http://static.filsinger.me/favicon.png" />
-  <link rel="apple-touch-icon-precomposed" href="http://static.filsinger.me/ios.png" />
 
   <meta name="author" content="Jason Filsinger"/>
   <meta http-equiv="content-language" content="en-US"/>
@@ -26,4 +25,12 @@
   {% endcase %}
 
   <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming">
+
+
+  <!-- IOS meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-startup-image" href="/images/startup.png">
+  <link rel="apple-touch-icon-precomposed" href="http://static.filsinger.me/ios.png" />
+
 </head>
