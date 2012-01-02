@@ -9,21 +9,8 @@
 	<header>
 	  <h1>{{ page.title }}</h1>
 	  <address>By <a href="/">Jason Filsinger</a></address>
-	  <time class="right">{{ page.date | date_to_long_string }}</time>
-	  <div id="categories">
-	    <ul>
-	      {% for c in page.categories %}
-	      <li class="category"><a href="{% category_url c %}">{{ c }}</a></li>
-	      {% endfor %}
-	    </ul>
-          </div>
-	  <div id="tags">
-	    <ul>
-	      {% for t in page.tags %}
-	      <li class="tag">{{ t }}</li>
-	      {% endfor %}
-	    </ul>
-          </div>
+	  <time class="right" pubdate="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+	  <ul id="tags" class="tags">{% for t in page.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
 	</header>
 	<section>
 	  {{ content }}
@@ -44,7 +31,7 @@
 	  -->
 	</div>
 	<div class="social">
-	  <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+	  <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit"/> </a>
 	  </div>
       </div>
       {% if page.comments != null %}

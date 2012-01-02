@@ -144,7 +144,9 @@ header#pageheader {
 	top: 3pt;
 }
 
-
+a img {
+	border: none;
+}
 
 /* @end Header */
 
@@ -281,15 +283,12 @@ pre code {
 
 /* @group Tags & Categories */
 
-article #tags {
+article ul.tags {
 	float: right;
 	clear: none;
 }
 
-article #tags li {
-	overflow: visible;
-}
-article #tags:before {
+article ul.tags:before {
 	background: url(http://static.filsinger.me/icons/DefaultIcon/16x16/tag.png) no-repeat right 4px;
 	width: 20px;
 	display: inline-block;
@@ -301,11 +300,8 @@ article #tags:before {
 	position: relative;
 }
 
-article #tags:hover li:before
-{
-	opacity: 1.0;
-}
-article #tags:hover {
+
+article ul.tags:hover {
 	width: auto;
 	opacity: 1.0;
 }
@@ -316,56 +312,30 @@ article #categories {
 	visibility: hidden;
 }
 
-article #tags,
-article #categories {
+article ul.tags,
+article ul.categories {
 	display: block;
-	//padding: 2pt 0pt 2pt 0pt;
 	color: rgba(0,0,0,0.5);
+	margin: 0;
+	cursor: default;
 }
 
-article #tags ul a,
-article #categories ul a,
-article #tags ul a:hover,
-article #categories ul a:hover {
+article ul.tags a,
+article ul.categories a,
+article ul.tags a:hover,
+article ul.categories a:hover {
 	background: none;
 	border: none;
 	color: rgba(0,0,0,0.5);
 }
 
-#tags ul, 
-#categories ul {
-	margin: 0;
-	padding: 0;
+article ul.tags li,
+article li.category {
 	display: inline-block;
-	cursor: default;
-}
-
-article li.tag,
-li.category {
-	display: inline-block;
-	//color: rgba(128,0,0,1);
-	//background-color: rgba(255,0,0,0.1);
-	//border: solid 1px rgba(255,0,0,0.3);
-	border-radius: 5px;
-	display: inline-block;
-	text-decoration: none;
 	cursor: default;
 	opacity: 0.5;
 	font-size: 12pt;
 	padding: 2px 5px;
-}
-
-article li.tag:hover,
-article li.category:hover
-{
-
-}
-
-article li.category
-{
-	color: rgba(0,128,0,1);
-	background-color: rgba(0,128,0,0.1);
-	border: solid 1px rgba(0,128,0,0.3);
 }
 
 /* @end */
