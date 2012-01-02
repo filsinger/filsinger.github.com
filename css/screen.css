@@ -6,6 +6,11 @@
 	//position: relative;
 }
 
+html {
+	overflow: auto;
+}
+
+
 head, script {
 	display: none;
 }
@@ -34,14 +39,14 @@ header, img, footer, #pagefooter, body {
 	position: relative;
 }
 
-html, body {
-	overflow: scroll;
+body {
 	font-family: Palatino, Georgia, "Times New Roman", Times, serif;
 	color: #222;
 	background-color: #fff;
 	font-size: 14pt;
 	margin: 0;
 }
+
 
 #wrapper {
 	min-height: 400px;
@@ -541,6 +546,8 @@ article li.category
 #pagefooter ul#commoninfo {
 	display: block;
 	cursor: default;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
 #pagefooter ul#commoninfo li:before ,
