@@ -1,29 +1,19 @@
+<!DOCTYPE html>
 <html>
   {% include html_head.html %}
   <body class="error">
-
     {% include page_header.html %}
     <div id="wrapper">
-
       <article>
-	<section class="left card">
-	  <div class="stuffing">
-	    <img src="/images/logo.png"/>
-	  </div>
-	</section>
-
+	<section class="left card">{% include big_site_logo.html %}</section>
 	<section class="right card">
 	  <header>
 	    <h1>{{ page.title }}</h1>
 	  </header>
 	  {{ content }}
 	</section>
-
+      </article>
     </div>
-
-    <footer id="pagefooter">
-      <div class="stuffing">
-      </div>
-    </footer>
+    {% include page_footer.html %}
   </body>
 </html>

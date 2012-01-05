@@ -3,14 +3,18 @@
 * {
 	display: block;
 	overflow: hidden;
-	//position: relative;
 }
+
+html {
+	overflow: auto;
+}
+
 
 head, script {
 	display: none;
 }
 
-span, a, em, strong, code {
+span, a, em, strong, code, time {
 	display: inline;
 }
 
@@ -34,14 +38,14 @@ header, img, footer, #pagefooter, body {
 	position: relative;
 }
 
-html, body {
-	overflow: scroll;
+body {
 	font-family: Palatino, Georgia, "Times New Roman", Times, serif;
 	color: #222;
 	background-color: #fff;
 	font-size: 14pt;
 	margin: 0;
 }
+
 
 #wrapper {
 	min-height: 400px;
@@ -93,7 +97,7 @@ header#pageheader {
 #pageheader {
 	position: absolute;
 	height: 30px;
-	font-family: "Courier New", Courier, mono;
+	font-family: "Courier New", Courier, mono, monospace;
 	overflow: visible;
 	z-index: 10;
 }
@@ -115,7 +119,7 @@ header#pageheader {
 }
 
 #sitelogo a {
-	background: url(../images/logo-small-w.png) no-repeat 0;
+	background: url(http://static.filsinger.me/images/logo-small-w.png) no-repeat 0;
 	padding-left: 30px;
 	padding-top: 2px;
 	
@@ -139,7 +143,9 @@ header#pageheader {
 	top: 3pt;
 }
 
-
+a img {
+	border: none;
+}
 
 /* @end Header */
 
@@ -227,7 +233,7 @@ article header address {
 
 article footer {
 	padding: 5 10 5 10;
-	font: 12pt "Courier New", Courier, mono;
+	font: 12pt "Courier New", Courier, mono, monospace;
 	text-align: center;
 	border-radius: 5pt;
 	margin: 60pt 20pt 0pt 20pt;
@@ -257,7 +263,7 @@ footer h1 {
 	margin: 0;
 	color: #cccece;
 	text-decoration: none;
-	font: normal 18pt "Courier New", Courier, mono;
+	font: normal 18pt "Courier New", Courier, mono, monospace;
 }
 
 /* @group Code */
@@ -276,15 +282,12 @@ pre code {
 
 /* @group Tags & Categories */
 
-article #tags {
+article ul.tags {
 	float: right;
 	clear: none;
 }
 
-article #tags li {
-	overflow: visible;
-}
-article #tags:before {
+article ul.tags:before {
 	background: url(http://static.filsinger.me/icons/DefaultIcon/16x16/tag.png) no-repeat right 4px;
 	width: 20px;
 	display: inline-block;
@@ -296,11 +299,8 @@ article #tags:before {
 	position: relative;
 }
 
-article #tags:hover li:before
-{
-	opacity: 1.0;
-}
-article #tags:hover {
+
+article ul.tags:hover {
 	width: auto;
 	opacity: 1.0;
 }
@@ -311,56 +311,30 @@ article #categories {
 	visibility: hidden;
 }
 
-article #tags,
-article #categories {
+article ul.tags,
+article ul.categories {
 	display: block;
-	//padding: 2pt 0pt 2pt 0pt;
 	color: rgba(0,0,0,0.5);
+	margin: 0;
+	cursor: default;
 }
 
-article #tags ul a,
-article #categories ul a,
-article #tags ul a:hover,
-article #categories ul a:hover {
+article ul.tags a,
+article ul.categories a,
+article ul.tags a:hover,
+article ul.categories a:hover {
 	background: none;
 	border: none;
 	color: rgba(0,0,0,0.5);
 }
 
-#tags ul, 
-#categories ul {
-	margin: 0;
-	padding: 0;
+article ul.tags li,
+article li.category {
 	display: inline-block;
-	cursor: default;
-}
-
-article li.tag,
-li.category {
-	display: inline-block;
-	//color: rgba(128,0,0,1);
-	//background-color: rgba(255,0,0,0.1);
-	//border: solid 1px rgba(255,0,0,0.3);
-	border-radius: 5px;
-	display: inline-block;
-	text-decoration: none;
 	cursor: default;
 	opacity: 0.5;
 	font-size: 12pt;
 	padding: 2px 5px;
-}
-
-article li.tag:hover,
-article li.category:hover
-{
-
-}
-
-article li.category
-{
-	color: rgba(0,128,0,1);
-	background-color: rgba(0,128,0,0.1);
-	border: solid 1px rgba(0,128,0,0.3);
 }
 
 /* @end */
@@ -481,7 +455,7 @@ article li.category
 
 #pagefooter,
 #pagefooter li {
-	font: 11pt "Courier New", Courier, mono;
+	font: 11pt "Courier New", Courier, mono, monospace;
 	color: #888;
 }
 
@@ -507,7 +481,6 @@ article li.category
 #pagefooter .block {
 	left: 0;
 	display: block;
-	//padding: 0 0 20px;
 	margin: 0;
 }
 
@@ -538,12 +511,11 @@ article li.category
 	margin: 8px 0 0;
 }
 
-#pagefooter #commoninfo {
-	cursor: default;
-}
-
-#pagefooter #commoninfo ul {
+#pagefooter ul#commoninfo {
 	display: block;
+	cursor: default;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
 #pagefooter ul#commoninfo li:before ,
@@ -572,3 +544,86 @@ article li.category
 }
 
 /* @end Page Footer */
+
+div.logo
+{
+	background: url(http://static.filsinger.me/images/logo.png) no-repeat center center;
+	width: 300px;
+	height: 300px;
+	display: block;
+}
+
+
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+	body { width: 768px; }
+
+	div.stuffing, 
+	div#wrapper,
+	{
+		width: 730px;
+	}
+	
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+	body {
+		width: 1024px;
+	}
+	
+	div.stuffing,
+	div#wrapper {
+		width: 1004px;
+	}
+}
+
+
+
+@media only screen and (max-width: 480px) {
+	body,
+	#pagefooter .row,
+	#pagefooter .column.left,
+	#pagefooter .column.right {
+		width: 100%;
+	}
+
+	div.stuffing,
+	div#wrapper,
+	.card,
+	.card.left,
+	.card.right,
+	.card.large {
+		width: 300px;
+	}
+
+	article .card img,
+	div.big.logo,
+	ul.posts li span,
+	#pagefooter #license.block img {
+		display: none;
+	}
+
+	.card.left,
+	.card.right,
+	.card.large,
+	#pagefooter .column.left,
+	#pagefooter .column.right,
+	time.right {
+		float: none;
+	}
+
+	body, time, code, time.right, article header address, pre code, #pagefooter, #pagefooter li {
+		font-size: 12pt;
+	}
+
+	
+	h1 { font-size: 16pt; }
+	h2 { font-size: 15pt; }
+	h3 { font-size: 14pt; }
+	h4 { font-size: 13pt; }
+	h5 { font-size: 12pt; }
+	
+	#wrapper { min-height: 0px; }
+	article header address,
+	pre code { margin: 0; }
+}

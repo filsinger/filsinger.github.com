@@ -4,12 +4,8 @@ title: Jason Filsinger
 meta-description: "Jason Filsinger's Blog"
 ---
 
-<article>
-
 <section class="left card">
-  <div class="stuffing">
-    <img src="/images/logo.png"/>
-  </div>
+  <div class="stuffing">{% include big_site_logo.html %}</div>
 </section>
 
 <section class="right card">
@@ -37,7 +33,7 @@ meta-description: "Jason Filsinger's Blog"
   </header>
   <ul class="posts">
     {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </section>
