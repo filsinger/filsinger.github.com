@@ -19,8 +19,8 @@
 		<rect x="9.0" y="2.0" width="6.0" height="6.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
 		<rect x="16.0" y="9.0" width="6.0" height="6.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
 		<rect x="9.0" y="16.0" width="6.0" height="6.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
-		<rect x="16.002" y="15.7" width="6.0" height="6.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
-		<rect x="2.069" y="15.808" width="6.0" height="6.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
+		<rect x="16.0" y="16.0" width="6.0" height="6.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
+		<rect x="2.0" y="16.0" width="6.0" height="6.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
 	</g>
 
 </svg>
