@@ -119,10 +119,13 @@ header#pageheader {
 }
 
 #sitelogo a {
-	background: url(http://static.filsinger.me/images/logo-small-w.png) no-repeat 0;
+	background-image: url(http://static.filsinger.me/images/logo-white-small.svg);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	background-size: 24px 24px;
 	padding-left: 30px;
 	padding-top: 2px;
-	
+
 	color: #eee;
 	text-decoration: none;
 }
@@ -540,14 +543,17 @@ article li.category {
 #pagefooter ul,
 #pagefooter ul li {
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 }
 
 /* @end Page Footer */
 
 div.logo
 {
-	background: url(http://static.filsinger.me/images/logo.png) no-repeat center center;
+	background-image: url(http://static.filsinger.me/images/logo.svg);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	background-size: 100% 100%;
 	width: 300px;
 	height: 300px;
 	display: block;
@@ -558,19 +564,19 @@ div.logo
 @media only screen and (max-width: 768px) and (orientation: portrait) {
 	body { width: 768px; }
 
-	div.stuffing, 
+	div.stuffing,
 	div#wrapper,
 	{
 		width: 730px;
 	}
-	
+
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
 	body {
 		width: 1024px;
 	}
-	
+
 	div.stuffing,
 	div#wrapper {
 		width: 1004px;
@@ -616,13 +622,13 @@ div.logo
 		font-size: 12pt;
 	}
 
-	
+
 	h1 { font-size: 16pt; }
 	h2 { font-size: 15pt; }
 	h3 { font-size: 14pt; }
 	h4 { font-size: 13pt; }
 	h5 { font-size: 12pt; }
-	
+
 	#wrapper { min-height: 0px; }
 	article header address,
 	pre code { margin: 0; }
