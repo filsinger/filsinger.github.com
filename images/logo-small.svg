@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24.0" height="24.0">
+
+	<metadata>
+		<rdf:RDF xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#" xmlns:dc = "http://purl.org/dc/elements/1.1/">
+			<rdf:Description rdf:about="http://likethought.com/opacity/">
+				<dc:title>New Image</dc:title>
+				<dc:creator>Jason Filsinger</dc:creator>
+				<dc:rights>Copyright 2012 Jason Filsinger</dc:rights>
+				<dc:description></dc:description>
+				<dc:format>image/svg+xml</dc:format>
+				<dc:language>en</dc:language>
+			</rdf:Description>
+		</rdf:RDF>
+	</metadata>
+	<g>
+		<title>Layer 2</title>
+		<rect x="9.0" y="2.0" width="6.0" height="6.0" fill="rgb(13.33%, 13.33%, 13.33%)" stroke="none" />
+		<rect x="16.0" y="9.0" width="6.0" height="6.0" fill="rgb(13.33%, 13.33%, 13.33%)" stroke="none" />
+		<rect x="9.0" y="16.0" width="6.0" height="6.0" fill="rgb(13.33%, 13.33%, 13.33%)" stroke="none" />
+		<rect x="16.002" y="15.7" width="6.0" height="6.0" fill="rgb(13.33%, 13.33%, 13.33%)" stroke="none" />
+		<rect x="2.069" y="15.808" width="6.0" height="6.0" fill="rgb(13.33%, 13.33%, 13.33%)" stroke="none" />
+	</g>
+
+</svg>
