@@ -15,28 +15,12 @@
 		</rdf:RDF>
 	</metadata>
 	<g>
-		<title>Layer 4</title>
-		<rect x="102.0" y="2.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
-	</g>
-
-	<g>
-		<title>Layer 5</title>
-		<rect x="202.0" y="102.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
-	</g>
-
-	<g>
-		<title>Layer 6</title>
-		<rect x="202.0" y="202.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
-	</g>
-
-	<g>
-		<title>Layer 7</title>
-		<rect x="2.0" y="202.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
-	</g>
-
-	<g>
 		<title>Layer 2</title>
 		<rect x="102.0" y="202.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
+		<rect x="202.0" y="202.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
+		<rect x="2.0" y="202.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
+		<rect x="102.0" y="2.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
+		<rect x="202.0" y="102.0" width="96.0" height="96.0" fill="rgb(100%, 100%, 100%)" stroke="none" />
 	</g>
 
 </svg>
