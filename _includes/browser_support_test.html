@@ -1,3 +1,4 @@
+{% if page.disable-browser-check == null %}
 <!-- Supported Browser Warning -->
 <!--[if lt IE 9]>
 <script type="text/javascript">
@@ -18,15 +19,13 @@ function getInternetExplorerVersion()
 
 function checkVersion()
 {
-  var msg = "You're not using Internet Explorer.";
   var ver = getInternetExplorerVersion();
-
   if ( ver > -1 && ver < 9.0 )
   {
-    msg = "If you insist on using Internet Explorer, this site requires a minimum version of IE 9";
-    alert( msg );
+    location.replace("/errormessages/browser_not_supported.html")
   }
 }
 checkVersion();
 </script>
 <![endif]-->
+{% endif %}
