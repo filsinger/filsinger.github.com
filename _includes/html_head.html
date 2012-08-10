@@ -26,4 +26,11 @@
   <link rel="apple-touch-startup-image" href="/images/startup.png">
   <link rel="apple-touch-icon-precomposed" href="http://static.filsinger.me/ios.png" />
 
+  {% if page.myopenid-account %}<!-- OpenID -->
+  <link rel="openid.server" href="http://www.myopenid.com/server" />
+  <link rel="openid.delegate" href="http://{{page.myopenid-account}}.myopenid.com/" />
+  <link rel="openid2.local_id" href="http://{{page.myopenid-account}}.myopenid.com" />
+  <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+  <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username={{page.myopenid-account}}.myopenid.com" />
+  {% endif %}
 </head>
