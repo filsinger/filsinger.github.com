@@ -17,3 +17,6 @@ This site was built by [Jason Filsinger](http://filsinger.me) using [Jekyll](htt
 * [Emacs](http://www.gnu.org/software/emacs/)
 * [Git](http://git-scm.com/)
 
+## Source
+
+The source code for this website is available on [github](https://github.com/filsinger/filsinger.me).
