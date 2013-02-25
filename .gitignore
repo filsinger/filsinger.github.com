@@ -3,3 +3,4 @@ _site/
 .#*
 build-site.sh
 *(Autosaved).opacity
+.htaccess
