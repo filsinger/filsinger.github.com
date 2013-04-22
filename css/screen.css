@@ -31,7 +31,8 @@ ol { list-style-type: decimal; }
 li { display: list-item; }
 
 code {
-	font-size: 16px;
+	font-family: 'Droid Sans Mono', sans-serif;
+	font-size: 14px;
 }
 
 header, img, footer, #pagefooter, body {
@@ -39,7 +40,7 @@ header, img, footer, #pagefooter, body {
 }
 
 body {
-	font-family: Palatino, Georgia, "Times New Roman", Times, serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #222;
 	background-color: #fff;
 	font-size: 14pt;
@@ -97,7 +98,8 @@ header#pageheader {
 #pageheader {
 	position: absolute;
 	height: 30px;
-	font-family: "Courier New", Courier, mono, monospace;
+	font-family: 'Droid Sans Mono', sans-serif;
+	font-size: 16px;
 	overflow: visible;
 	z-index: 10;
 }
@@ -183,6 +185,11 @@ div#wrapper {
 
 
 /* @group Headdings */
+h1, h2, h3 {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
 h1 {
 	font-size: 30pt;
 	margin-top: 50pt;
@@ -277,7 +284,7 @@ pre code {
 	margin: 0px 20pt 0 20pt;
 	padding: 10px 20px 15px 20px;
 	border-radius: 10px;
-	font-size: 14px;
+	font-size: 13px;
 	overflow: auto;
 }
 
