@@ -4,6 +4,11 @@ $font_body: 'Open Sans', sans-serif
 $font_headding: 'Ubuntu', sans-serif
 $font_footer: "Courier New", Courier, mono, monospace
 
+$color_dark_grey: #222
+$color_white: #fff
+$color_light_grey: #eee
+
+
 *
   display: block
   overflow: hidden
@@ -33,14 +38,14 @@ code
   font-family: $font_code
   font-size: 14px
 
-header, img, footer, #pagefooter
+header, img, footer
   position: relative
 
 body
   position: relative
   font-family: $font_body
-  color: #222
-  background-color: #fff
+  color: $color_dark_grey
+  background-color: $color_white
   font-size: 14pt
   margin: 0
 
@@ -55,26 +60,7 @@ body
   float: left
   clear: left
 
-footer#pagefooter, pre code, header#pageheader
-  background-color: #222
-  color: #eee
-
-#pageheader
-  -webkit-user-select: none
-  -khtml-user-select: none
-  -moz-user-select: none
-  -o-user-select: none
-  user-select: none
-
-article
-  #tags, #categories
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -o-user-select: none
-    user-select: none
-
-.social, #disqus_thread, #pagefooter
+.social, #disqus_thread, #pagefooter, #pageheader, article #tags
   -webkit-user-select: none
   -khtml-user-select: none
   -moz-user-select: none
@@ -83,44 +69,47 @@ article
 
 // @group Page Header & Footer
 
-footer#pagefooter, header#pageheader
-  left: 0px
-  right: 0px
-  min-height: 40px
+a img
+  border: none
+
 
 // @group Header
 
-#pageheader
+header#pageheader
+  background-color: $color_dark_grey
+  color: $color_light_grey
+  left: 0px
+  right: 0px
+  min-height: 40px
   position: absolute
   height: 30px
   font-family: $font_code
   font-size: 16px
   overflow: visible
   z-index: 10
+
   a
     display: inline-block
-    color: #eee
+    color: $color_light_grey
     text-decoration: none
 
-#sitelogo
-  float: left
+  .stuffing
+    margin-top: 8px
+    margin-bottom: 8px
+    overflow: visible
 
-#pageheader .stuffing
-  margin-top: 8px
-  margin-bottom: 8px
-  overflow: visible
+  #sitelogo
+    float: left
+    a
+      background-image: url(http://static.filsinger.me/images/logo-white-small.svg)
+      background-repeat: no-repeat
+      background-position: 0 center
+      background-size: 24px 24px
+      padding-left: 30px
+      padding-top: 2px
+      color: $color_light_grey
+      text-decoration: none
 
-#sitelogo a
-  background-image: url(http://static.filsinger.me/images/logo-white-small.svg)
-  background-repeat: no-repeat
-  background-position: 0 center
-  background-size: 24px 24px
-  padding-left: 30px
-  padding-top: 2px
-  color: #eee
-  text-decoration: none
-
-#pageheader
   #category
     float: right
     a
@@ -131,19 +120,9 @@ footer#pagefooter, header#pageheader
     display: inline-block
     top: 3pt
 
-a img
-  border: none
-
 // @end Header
 
 // @group Footer
-
-footer#pageFooter
-  bottom: 0px
-  left: 0px
-  right: 0px
-  min-height: 24px
-  padding-bottom: 20px
 
 // @end Footer
 
@@ -152,14 +131,11 @@ footer#pageFooter
 // @group Page Padding
 
 div
-  &.stuffing
+  &.stuffing, &#wrapper
     width: 730px
     margin-left: auto
     margin-right: auto
   &#wrapper
-    width: 730px
-    margin-left: auto
-    margin-right: auto
     top: 30pt
 
 // @end
@@ -190,49 +166,6 @@ h4
 
 // @group Articles
 
-article
-  margin-top: 80px
-  header
-    h1
-      margin: 0 0 0 0
-    time
-      color: rgba(0, 0, 0, 0.5)
-      font-size: 16pt
-      display: inline-block
-      cursor: default
-    address
-      float: left
-      display: inline-block
-      margin: 0 0 0 30pt
-      font-size: 16pt
-      font-weight: normal
-      font-style: normal
-      text-decoration: none
-      cursor: default
-      clear: left
-      width: 400px
-  footer
-    padding: 5 10 5 10
-    font-family: $font_footer
-    font-size: 12pt
-    text-align: center
-    border-radius: 5pt
-    margin: 60pt 20pt 0pt 20pt
-    background-color: #fff
-    color: #aaa
-  a
-    color: #3861ac
-    background-color: rgba(211, 237, 254, 0)
-    border-radius: 5px
-    border: 1px solid rgba(122, 174, 253, 0)
-    display: inline
-    text-decoration: none
-    margin: -3px
-    padding: 3px
-    &:hover
-      border: 1px solid rgba(122, 174, 253, 0.5)
-      background-color: rgba(211, 237, 254, 0.25)
-
 // @end
 
 footer h1
@@ -251,60 +184,121 @@ pre code
   border-radius: 10px
   font-size: 13px
   overflow: auto
+  background-color: $color_dark_grey
+  color: $color_light_grey
 
 // @end
 
-// @group Tags & Categories
+// @group Tags
 
 article
-  ul.tags
-    float: right
-    clear: none
-    &:before
-      background: url(http://static.filsinger.me/icons/DefaultIcon/16x16/tag.png) no-repeat right 4px
-      width: 20px
+  margin-top: 80px
+
+  header
+    h1
+      margin: 0 0 0 0
+    time
+      color: rgba(0, 0, 0, 0.5)
+      font-size: 16pt
       display: inline-block
-      content: "."
-      color: transparent
-      opacity: 0.1
-      top: -1px
-      height: 20px
-      position: relative
+      cursor: default
+    address
+      float: left
+      clear: left
+      display: inline-block
+      margin: 0 0 0 30pt
+      font-size: 16pt
+      font-style: normal
+      cursor: default
+      width: 400px
+
+    ul
+      &.tags
+        display: block
+        color: rgba(0, 0, 0, 0.5)
+        margin: 0
+        cursor: default
+        float: right
+        clear: none
+
+        &:before
+          background: url(http://static.filsinger.me/icons/DefaultIcon/16x16/tag.png) no-repeat right 4px
+          width: 20px
+          display: inline-block
+          content: "."
+          color: transparent
+          opacity: 0.1
+          top: -1px
+          height: 20px
+          position: relative
+
+        &:hover
+          width: auto
+          opacity: 1.0
+
+        li
+          display: inline-block
+          cursor: default
+          opacity: 0.5
+          font-size: 12pt
+          padding: 2px 5px
+
+          a, a:hover
+            background: none
+            border: none
+            color: rgba(0, 0, 0, 0.5)
+
+  footer
+    padding: 5 10 5 10
+    font-family: 12pt, $font_footer
+    text-align: center
+    border-radius: 5pt
+    margin: 60pt 20pt 0pt 20pt
+    background-color: $color_white
+    color: #aaa
+
+  a
+    color: #3861ac
+    background-color: rgba(211, 237, 254, 0)
+    border-radius: 5px
+    border: 1px solid rgba(122, 174, 253, 0)
+    display: inline
+    text-decoration: none
+    margin: -3px
+    padding: 3px
     &:hover
-      width: auto
-      opacity: 1.0
-  #categories
-    clear: left
-    float: left
-    visibility: hidden
-  ul
-    &.tags, &.categories
-      display: block
-      color: rgba(0, 0, 0, 0.5)
-      margin: 0
-      cursor: default
-    &.tags a, &.categories a, &.tags a:hover, &.categories a:hover
-      background: none
-      border: none
-      color: rgba(0, 0, 0, 0.5)
-    &.tags li
-      display: inline-block
-      cursor: default
-      opacity: 0.5
-      font-size: 12pt
-      padding: 2px 5px
-  li.category
-    display: inline-block
-    cursor: default
-    opacity: 0.5
-    font-size: 12pt
-    padding: 2px 5px
+      border-color: rgba(122, 174, 253, 0.5)
+      background-color: rgba(211, 237, 254, 0.25)
+
 
 // @end
 
 // @group Page Footer
 
-#pagefooter
+footer#pagefooter
+  bottom: 0px
+  left: 0px
+  right: 0px
+  min-height: 24px
+  padding-bottom: 20px
+  background-color: $color_dark_grey
+  color: $color_light_grey
+  position: relative
+  font: 11pt $font_footer
+  color: #888
+
+  a
+    border: none
+    background-color: none
+    margin-left: 2pt
+    color: rgba(153, 191, 253, 0.6)
+    text-decoration: none
+    &:hover
+      border: none
+      background: none
+      color: rgba(153, 191, 253, 1)
+      text-decoration: none
+
   .column
     margin-top: 20pt
     width: 50%
@@ -312,21 +306,68 @@ article
     top: 0
     bottom: 0
     position: static
+
   ul
     padding: 0
     margin-top: 5pt
     font-size: 14pt
+    padding: 0
+    margin: 0
     li
       list-style: none
       padding: 2pt 0 0 0
-  li a
-    color: #eee
-    border: none
-    background-color: none
-    margin-left: 2pt
-    &:hover
-      border: none
-      background: none
+      font: 11pt $font_footer
+      color: #888
+      padding: 0
+      margin: 0
+
+  h1
+    padding: 0
+    cursor: default
+    color: rgba(253, 89, 98, 0.6)
+    margin: 0 0 5px
+
+  .block
+    left: 0
+    display: block
+    margin: 0
+
+  .row
+    display: block
+    clear: both
+    text-align: center
+    padding-top: 5px
+    &:empty
+      display: none
+
+  .column
+    margin-bottom: 0px
+    &:empty
+      display: none
+    &.left
+      width: 560px
+    &.right
+      width: 150px
+
+  #license
+    img
+      opacity: 0.1
+      float: left
+      margin-right: 10px
+      width: 64px
+    p
+      margin: 8px 0 0
+
+  ul#commoninfo
+    display: block
+    cursor: default
+    padding-bottom: 10px
+    padding-top: 10px
+    li
+      &:before, &:after
+        content: "|"
+        color: #555
+      display: inline-block
 
 // @end
 
@@ -347,8 +388,9 @@ article
     width: 300px
     margin-left: 0
     margin-right: 0
-  .categories li, .tags li a
-    display: inline-block
+  .tags
+    li, li a
+      display: inline-block
 
 // @end
 
@@ -384,72 +426,6 @@ article
 .tooltiptrigger:hover ~ .tooltip
   opacity: 1.0
 
-// @group Page Footer
-
-#pagefooter
-  font: 11pt $font_footer
-  color: #888
-  li
-    font: 11pt $font_footer
-    color: #888
-  h1
-    padding: 0
-    cursor: default
-    color: rgba(253, 89, 98, 0.6)
-    margin: 0 0 5px
-  li a, a
-    color: rgba(153, 191, 253, 0.6)
-    text-decoration: none
-  li a:hover, a:hover
-    color: rgba(153, 191, 253, 1)
-    text-decoration: none
-  .block
-    left: 0
-    display: block
-    margin: 0
-  .row
-    display: block
-    clear: both
-    text-align: center
-    padding-top: 5px
-  .column
-    margin-bottom: 0px
-    &:empty
-      display: none
-  .row:empty
-    display: none
-  #license
-    img
-      opacity: 0.1
-      float: left
-      margin-right: 10px
-      width: 64px
-    p
-      margin: 8px 0 0
-  ul#commoninfo
-    display: block
-    cursor: default
-    padding-bottom: 10px
-    padding-top: 10px
-    li
-      &:before, &:after
-        content: "|"
-        color: #555
-      display: inline-block
-  .column
-    &.left
-      width: 560px
-    &.right
-      width: 150px
-  ul
-    padding: 0
-    margin: 0
-    li
-      padding: 0
-      margin: 0
-
-// @end Page Footer
-
 div.logo
   background-image: url(http://static.filsinger.me/images/logo.svg)
   background-repeat: no-repeat
@@ -477,11 +453,20 @@ div.logo
   body
     width: 100%
   #pagefooter
+    font-size: 12pt
+    li
+      font-size: 12pt
     .row
       width: 100%
     .column
       &.left, &.right
         width: 100%
+        float: none
+    #license
+      img
+        display: none
+      p
+        width: 300px
   div
     &.stuffing, &#wrapper
       width: 300px
@@ -489,22 +474,13 @@ div.logo
     width: 300px
     &.left, &.right, &.large
       width: 300px
-  article .card img, div.big.logo, ul.posts li span, #pagefooter #license.block img
+      float: none
+  article .card img, div.big.logo, ul.posts li span
     display: none
-  .card
-    &.left, &.right, &.large
-      float: none
-  #pagefooter .column
-    &.left, &.right
-      float: none
   time.right
     float: none
   body, time, code, time.right, article header address, pre code
     font-size: 12pt
-  #pagefooter
-    font-size: 12pt
-    li
-      font-size: 12pt
   h1
     font-size: 16pt
   h2
