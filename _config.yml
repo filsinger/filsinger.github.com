@@ -2,3 +2,8 @@ markdown: rdiscount
 highlighter: rouge
 permalink: /:categories/:title/
 lsi: true
+
+assets:
+  compress:
+    css:  sass
+    js:   uglifier
