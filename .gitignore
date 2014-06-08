@@ -4,3 +4,5 @@ _site/
 build-site.sh
 *(Autosaved).opacity
 .htaccess
+*.css.css
+.sass-cache
