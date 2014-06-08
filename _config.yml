@@ -1,4 +1,4 @@
 markdown: rdiscount
-highlighter: pygments
+highlighter: rouge
 permalink: /:categories/:title/
 lsi: true
