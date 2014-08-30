@@ -1,7 +1,7 @@
 ---
 layout: post
 title: System Clipboard With tmux
-tags: ['tmux', 'osx', 'cygwin', 'linux']
+tags: ['tmux', 'osx', 'cygwin', 'linux', 'emacs']
 category: workflow
 comments: false
 meta-description: "Jason Filsinger discusses how he uses tmux with the system clipboard on various platforms."
@@ -120,4 +120,30 @@ sourced.
 {% highlight conf %}
 # Clipboard support when a display is detected
 if-shell '[[ -n $DISPLAY ]]' 'source-file ~/.tmux.clipboard.conf'
+{% endhighlight %}
+
+### Bonus Round: Emacs Inside tmux on OS X
+
+Running Emacs inside of tmux on OS X is pretty straightforward; add the following code to your `.emacs` config file to allow copy/paste with the system clipboard.
+
+{% highlight cl %}
+(when (eq system-type 'darwin)
+  ;; terminal clipboard while inside tmux
+  (unless (display-graphic-p)
+    (when (and (> (length (getenv "TMUX")) 0) (executable-find "reattach-to-user-namespace"))
+
+    (defun paste-from-osx ()
+      (shell-command-to-string "reattach-to-user-namespace pbpaste") )
+
+    (defun cut-to-osx (text &optional push)
+      (let ((process-connection-type nil))
+        (let ((proc (start-process "pbcopy" "*Messages*" "reattach-to-user-namespace" "pbcopy") ))
+		  (process-send-string proc text)
+		  (process-send-eof proc))))
+
+      (setq interprogram-cut-function 'cut-to-osx)
+      (setq interprogram-paste-function 'paste-from-osx)
+    )
+  )
+)
 {% endhighlight %}
