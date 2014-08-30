@@ -122,7 +122,7 @@ sourced.
 if-shell '[[ -n $DISPLAY ]]' 'source-file ~/.tmux.clipboard.conf'
 {% endhighlight %}
 
-### Bonus Round: Emacs Inside tmux on OS X
+# Bonus Round: Emacs in tmux on OS X
 
 Running Emacs inside of tmux on OS X is pretty straightforward; add the following code to your `.emacs` config file to allow copy/paste with the system clipboard.
 
