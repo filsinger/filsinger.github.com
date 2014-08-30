@@ -1,8 +1,8 @@
 ---
 layout: post
 title: System Clipboard With tmux
-tags: ['tmux', 'osx', 'cygwin']
-category: tmux
+tags: ['tmux', 'osx', 'cygwin', 'linux']
+category: workflow
 comments: false
 meta-description: "Jason Filsinger discusses how he uses tmux with the system clipboard on various platforms."
 license: "cc-by-nc-sa"
