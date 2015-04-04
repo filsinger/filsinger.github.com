@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem "sass"
-gem "uglifier"
+gem 'sass'
+gem 'uglifier'
 gem 'jekyll'
 gem 'jekyll-assets'
 gem 'jekyll-categories'
