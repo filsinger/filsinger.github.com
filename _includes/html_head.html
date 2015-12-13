@@ -1,37 +1,37 @@
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
-  <title>filsinger.me - {{ page.title }}</title>
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <title>filsinger.me - {{ page.title }}</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 
-  {% stylesheet screen %}
-  {% stylesheet syntax %}
-  <link rel="alternate" type="application/rss+xml" title="filsinger.me" href="/feed/rss.xml" />
-  <link rel="alternate" type="application/atom+xml" title="filsinger.me" href="/feed/atom.xml" />
-  <link rel="shortcut icon" href="{% asset_path favicon.ico %}" />
-  <link rel="icon" type="image/png" href="{% asset_path favicon.png %}" />
+    {% stylesheet screen %}
+    {% stylesheet syntax %}
+    <link rel="alternate" type="application/rss+xml" title="filsinger.me" href="/feed/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="filsinger.me" href="/feed/atom.xml" />
+    <link rel="shortcut icon" href="{% asset_path favicon.ico %}" />
+    <link rel="icon" type="image/png" href="{% asset_path favicon.png %}" />
 
-  <meta name="author" content="Jason Filsinger"/>
-  <meta charset="utf-8">
-  <meta name="robots" content="noodp, noydir{% if page.noindex == true %}, noindex{% endif %}" />
-  {% if page.noindex == true %}<meta name="googlebot" content="noarchive"/>{% endif %}
-  {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
-  {% case page.license %}
-  {% when "cc-by-nc-sa" %}<meta name="copyright" content="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License." />
-  {% when "copyright" %}<meta name="copyright" content="&copy; 2011-2012 Jason Filsinger" />
-  {% else %}{% endcase %}
-  <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming">
+    <meta name="author" content="Jason Filsinger"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="noodp, noydir{% if page.noindex == true %}, noindex{% endif %}" />
+    {% if page.noindex == true %}<meta name="googlebot" content="noarchive"/>{% endif %}
+    {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
+    {% case page.license %}
+    {% when "cc-by-nc-sa" %}<meta name="copyright" content="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License." />
+    {% when "copyright" %}<meta name="copyright" content="&copy; 2011-2012 Jason Filsinger" />
+    {% else %}{% endcase %}
+    <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming">
 
-  <!-- IOS meta tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <link rel="apple-touch-icon-precomposed" href="{% asset_path ios.png %}" />
+    <!-- IOS meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon-precomposed" href="{% asset_path ios.png %}" />
 
-  {% if page.myopenid-account %}<!-- OpenID -->
-  <link rel="openid.server" href="http://www.myopenid.com/server" />
-  <link rel="openid.delegate" href="http://{{page.myopenid-account}}.myopenid.com/" />
-  <link rel="openid2.local_id" href="http://{{page.myopenid-account}}.myopenid.com" />
-  <link rel="openid2.provider" href="http://www.myopenid.com/server" />
-  <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username={{page.myopenid-account}}.myopenid.com" />
-  {% endif %}
+    {% if page.myopenid-account %}<!-- OpenID -->
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate" href="http://{{page.myopenid-account}}.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://{{page.myopenid-account}}.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username={{page.myopenid-account}}.myopenid.com" />
+    {% endif %}
 </head>
