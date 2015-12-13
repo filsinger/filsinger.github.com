@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
-  {% include html_head.html %}
-  <body>
-    {% include page_header.html %}
-    <div id="wrapper">
-      <article>
-	<header>
-	  <h1>{{ page.title }}</h1>
-	  <address>By <a href="/">Jason Filsinger</a></address>
-	  <time class="right" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
-	  <ul class="tags">{% for t in page.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
-	</header>
-	<section>
-	  {{ content }}
-	</section>
-	<footer>
-	  Thank you for reading.
-	</footer>
-      </article>
-      <div class="stuffing">
-	<div class="license">
-	  <a class="tooltiptriger" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-	    <img alt="Creative Commons License" style="border-width:0" src="http://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg" />
-	  </a>
-	</div>
-	<div class="social">
-	  <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit"/> </a>
-	  </div>
-      </div>
-      {% include disqus_comments.html %}
-    </div>
-    {% include page_footer.html %}
-  </body>
+    {% include html_head.html %}
+    <body>
+        {% include page_header.html %}
+        <div id="wrapper">
+            <article>
+                <header>
+                    <h1>{{ page.title }}</h1>
+                    <address>By <a href="/">Jason Filsinger</a></address>
+                    <time class="right" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+                    <ul class="tags">{% for t in page.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
+                </header>
+                <section>
+                    {{ content }}
+                </section>
+                <footer>
+                    Thank you for reading.
+                </footer>
+            </article>
+            <div class="stuffing">
+                <div class="license">
+                    <a class="tooltiptriger" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+                        <img alt="Creative Commons License" style="border-width:0" src="{% asset_path by-nc-sa.svg %}" />
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="https://www.reddit.com/static/spreddit7.gif" alt="submit to reddit"/> </a>
+                </div>
+            </div>
+            {% include disqus_comments.html %}
+        </div>
+        {% include page_footer.html %}
+    </body>
 </html>
