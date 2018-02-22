@@ -20,10 +20,11 @@ This site was built by [Jason Filsinger](http://filsinger.me) using [Jekyll](htt
 ## Tools
 
 * [Jekyll](https://github.com/mojombo/jekyll)
-* [Emacs](http://www.gnu.org/software/emacs/)
-* [Git](http://git-scm.com/)
-* [Pygments](http://pygments.org/)
+* [Emacs](http://www.gnu.org/software/emacs)
+* [Git](http://git-scm.com)
+* [Rogue](https://github.com/jneen/rouge)
 * [Jekyll Categories](https://github.com/zroger/jekyll-categories)
+* [Kramdown](https://kramdown.gettalong.org/)
 
 ## Source
 
