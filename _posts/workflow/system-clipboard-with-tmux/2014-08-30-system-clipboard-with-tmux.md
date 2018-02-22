@@ -126,7 +126,7 @@ if-shell '[[ -n $DISPLAY ]]' 'source-file ~/.tmux.clipboard.conf'
 
 Running Emacs inside of tmux on OS X is pretty straightforward; add the following code to your `.emacs` config file to allow copy/paste with the system clipboard.
 
-{% highlight cl %}
+{% highlight emacs-lisp %}
 (when (eq system-type 'darwin)
   ;; terminal clipboard while inside tmux
   (unless (display-graphic-p)

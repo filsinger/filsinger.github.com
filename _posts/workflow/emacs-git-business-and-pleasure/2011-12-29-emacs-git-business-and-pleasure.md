@@ -9,12 +9,12 @@ license: "cc-by-nc-sa"
 ---
 Emacs is an amazing editor; it can be simple, complex, overwhelming, and powerful.
 
-##The Motivation
+## The Motivation
 Every [emacs](http://www.gnu.org/software/emacs/) user I know (_all both of them_)
 has, at one point, lost their emacs configuration.  After 'misplacing' my config (_for the 3rd
 time_) I decided to do something about it.   My solution: use [Dropbox](http://dropbox.com).
 
-For months I thought I had a workable solution;  Two dropbox accounts (_**work** and **home**_) linked with folder sharing 
+For months I thought I had a workable solution;  Two dropbox accounts (_**work** and **home**_) linked with folder sharing
 between the two emacs config folders.  Then came the Monday morning a couple weeks ago; I showed up
 to work and realized the fancy emacs modifications I made over the weekend were missing.
 After some investigation I realized it wasn't a recent desync, it had been out of sync for a while.  The Dropbox folder
@@ -24,7 +24,7 @@ My outdated configs made me pull the trigger on something I've wanted to do for 
 It's the perfect solution for managing my emacs config.
 
 
-##The Structure
+## The Structure
 Currently, my emacs config folder exists in `~/.emacs.git/` on OS X, and in `%USERPROFILE%/.emacs.git/` on Windows. (_I
 might change this in the near future; place everything within the `~/.emacs.d` folder_)
 
@@ -63,7 +63,7 @@ Here is my `~/.emacs`:
 Take note of the `emacs-sync-path` variable, it's used later in the `common-init.el`.
 
 
-##The Submodules
+## The Submodules
 The power of my emacs setup comes from the hard work of others,  let's take a look at how I harness their genius.
 
 I will use [`markdown-mode.el`](http://jblevins.org/projects/markdown-mode/) as an example of how I use the submodule paradigm with emacs extensions (_The steps are roughly the same for all submodules_).
@@ -73,7 +73,7 @@ I will use [`markdown-mode.el`](http://jblevins.org/projects/markdown-mode/) as 
 From within the `~/.emacs.git/` folder we run the following command:
 {% highlight bash %}
 git submodule add git://jblevins.org/git/markdown-mode.git submodules/markdown-mode
-{% if false %} 
+{% if false %}
 git submodule update --init
 git add submodules/markdown-mode
 {% endif %}
@@ -86,7 +86,7 @@ git add submodules/markdown-mode
 * _When cloning a git repository as a submodule:  the submodule will have no 'local branch' but will instead contain a floating `HEAD`. (I recommend you read the submodule chapter in [ProGit](http://progit.org/book/ch6-6.html) if you want more information)_
 
 
-"**`git add submodules/markdown-mode`**" - The third command lets the git superproject know which SHA the submodule is using. 
+"**`git add submodules/markdown-mode`**" - The third command lets the git superproject know which SHA the submodule is using.
 
 * _Notice that the 3rd line does **NOT** have '**/**' at the end.  If the path we are adding ends with '**/**', git thinks think we are adding the directory [and all its contents] and not the submodule_
 {% endif %}
@@ -96,7 +96,7 @@ Taking advantage of the `emacs-sync-path` variable that was defined within the `
 path to the emacs `load-path` within my `common-init.el` file.
 {% highlight cl %}
 (add-to-list 'load-path (concat emacs-sync-path "/submodules/markdown-mode"))
-(setq auto-mode-alist 
+(setq auto-mode-alist
 	(cons '("\\.\\(md\\|markdown\\)$" . markdown-mode) auto-mode-alist))
 (autoload 'markdown-mode "markdown-mode" "Markdown editing mode." t)
 (add-hook 'markdown-mode-hook 'turn-on-font-lock)
@@ -131,7 +131,7 @@ git submodule update --init
 "**`git submodule update --init`**" - Tells git to initialize and update the submodules required by the superproject.
 
 ### More Information about Submodules
-Git submodules are powerful but they can be a little confusing when you're just starting out.  If you're new to submodules 
+Git submodules are powerful but they can be a little confusing when you're just starting out.  If you're new to submodules
 I highly recommend taking the time to learn and understand them. [ProGit](http://progit.org/book/) has
 a [chapter](http://progit.org/book/ch6-6.html) dedicated to submodules.
 
@@ -140,7 +140,7 @@ For the most part my `common-init.el` emacs config just loads extensions from su
 If you're interested in seeing it,  you can find it [here](https://github.com/filsinger/emacs-config/blob/master/common-init.el).
 
 
-## The Work/Life Balance 
+## The Work/Life Balance
 Like I mentioned earlier, one of the submodules is a private repository containing all of my work-related emacs config options.
 
 Here is a summary of what it contains:
@@ -158,5 +158,3 @@ emacs extensions on all the computers I use with minimal maintenance. I'm able t
 with just a few shell commands which leaves me with just one file (_the `common-init.el`_) to maintain.
 
 You can find my [emacs config repository](https://github.com/filsinger/emacs-config) on [GitHub](https://github.com).
-
-

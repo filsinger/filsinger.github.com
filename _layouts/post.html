@@ -21,11 +21,11 @@
             <div class="stuffing">
                 <div class="license">
                     <a class="tooltiptriger" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-                        <img alt="Creative Commons License" style="border-width:0" src="{% asset_path by-nc-sa.svg %}" />
+                        <img alt="Creative Commons License" style="border-width:0" src="{% asset by-nc-sa.svg @path %}" />
                     </a>
                 </div>
                 <div class="social">
-                    <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="https://www.reddit.com/static/spreddit7.gif" alt="submit to reddit"/> </a>
+                    <a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | uri_escape }}" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="https://www.reddit.com/static/spreddit7.gif" alt="submit to reddit"/> </a>
                 </div>
             </div>
             {% include disqus_comments.html %}

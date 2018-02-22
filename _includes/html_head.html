@@ -4,12 +4,11 @@
     <title>filsinger.me - {{ page.title }}</title>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 
-    {% stylesheet screen %}
-    {% stylesheet syntax %}
-    <link rel="alternate" type="application/rss+xml" title="filsinger.me" href="/feed/rss.xml" />
-    <link rel="alternate" type="application/atom+xml" title="filsinger.me" href="/feed/atom.xml" />
-    <link rel="shortcut icon" href="{% asset_path favicon.ico %}" />
-    <link rel="icon" type="image/png" href="{% asset_path favicon.png %}" />
+    {% asset screen.css %}
+    {% asset syntax.css %}
+    {% feed_meta %}
+    <link rel="shortcut icon" href="{% asset favicon.ico @path %}" />
+    <link rel="icon" type="image/png" href="{% asset favicon.png @path %}" />
 
     <meta name="author" content="Jason Filsinger"/>
     <meta charset="utf-8">
@@ -25,7 +24,7 @@
     <!-- IOS meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon-precomposed" href="{% asset_path ios.png %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% asset ios.png @path %}" />
 
     {% if page.myopenid-account %}<!-- OpenID -->
     <link rel="openid.server" href="http://www.myopenid.com/server" />

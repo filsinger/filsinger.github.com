@@ -1,9 +1,27 @@
-markdown: rdiscount
-highlighter: rouge
+markdown: kramdown
 permalink: /:categories/:title/
 lsi: true
+compression: true
+encoding: utf-8
+author: filsinger
+title: filsinger.me
+utl: filsinger.me
+description: Jason Filsinger's Blog
+twitter_username: filsinger
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 assets:
   compress:
     css:  sass
     js:   uglifier
+
+caching:
+  path: ".jekyll-cache/assets"
+  type: file # Possible values: memory, file
+  enabled: true
+
+plugins:
+  - jekyll-feed

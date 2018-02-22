@@ -2,40 +2,40 @@
 layout: simple
 title: Jason Filsinger
 meta-description: "Jason Filsinger's Blog"
-myopenid-account: jasonfilsinger
 ---
 
 <section class="left card">
-  <div class="stuffing">{% include big_site_logo.html %}</div>
+    <div class="stuffing">{% include big_site_logo.html %}</div>
 </section>
 
 <section class="right card">
-  <header>
-    <h1>About Me</h1>
-  </header>
-  Game developer, programmer, zombie food.
+    <header>
+        <h1>About Me</h1>
+    </header>
+    Game developer, programmer, zombie food.
 </section>
 
 <section class="right card">
-  <header>
-    <h1>Social</h1>
-  </header>
-  <ul>
-    <li><a href="http://twitter.com/filsinger">Twitter</a></li>
-    <li><a href="http://github.com/filsinger">GitHub</a></li>
-    <li><a href="http://flickr.com/filsinger">Flickr</a></li>
-  </ul>
+    <header>
+        <h1>Social</h1>
+    </header>
+    <ul>
+        <li><a href="https://keybase.io/filsinger">Keybase</a></li>
+        <li><a href="https://twitter.com/filsinger">Twitter</a></li>
+        <li><a href="https://github.com/filsinger">GitHub</a></li>
+        <li><a href="https://flickr.com/filsinger">Flickr</a></li>
+    </ul>
 </section>
 
 {% if site.posts != empty %}
 <section class="large card">
-  <header>
-    <h1>Posts</h1>
-  </header>
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+    <header>
+        <h1>Posts</h1>
+    </header>
+    <ul class="posts">
+        {% for post in site.posts %}
+        <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
 </section>
 {% endif %}

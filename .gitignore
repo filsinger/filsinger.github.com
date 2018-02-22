@@ -6,3 +6,5 @@ build-site.sh
 .htaccess
 *.css.css
 .sass-cache
+vendor/
+.jekyll-cache/
