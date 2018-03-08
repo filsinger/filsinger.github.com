@@ -4,8 +4,51 @@ variables:
   JEKYLL_ENV: production
 
 before_script:
+  ##
+  ## Install ssh-agent if not already installed, it is required by Docker.
+  ##
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+
+  ##
+  ## Run ssh-agent (inside the build environment)
+  ##
+  - eval $(ssh-agent -s)
+
+  ##
+  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  ## We're using tr to fix line endings which makes ed25519 keys work
+  ## without extra base64 encoding.
+  ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
+  ##
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+
+  ##
+  ## Create the SSH directory and give it the right permissions
+  ##
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+  ##
+  ## Assuming you created the SSH_KNOWN_HOSTS variable, uncomment the
+  ## following two lines.
+  ##
+  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+
+  ##
+  ## install nodejs
+  ##
   - apt-get update -qq && apt-get install -y -qq nodejs
+
+  ##
+  ## bundle install
+  ##
   - bundle install
+
+stages:
+  - test
+  - build
+  - deploy
 
 test:
   stage: test
@@ -17,12 +60,23 @@ test:
   except:
   - master
 
-pages:
+build:
   stage: deploy
   script:
   - bundle exec jekyll build -d public
   artifacts:
     paths:
     - public
+  only:
+  - master
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to staging server"
+    - scp -r public webuser@filsinger.me:public/staging
+  environment:
+    name: staging
+    url: http://staging.filsinger.me
   only:
   - master
