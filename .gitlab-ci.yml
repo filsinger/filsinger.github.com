@@ -5,6 +5,7 @@ variables:
 
 before_script:
   - bundle install
+  - apt-get install nodejs
 
 test:
   stage: test
