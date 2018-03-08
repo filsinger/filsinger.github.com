@@ -70,13 +70,42 @@ build:
   only:
   - master
 
+deploy_review:
+  stage: deploy
+  script:
+    - echo "Deploy a review"
+    - bundle exec jekyll build -d review
+    - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/review/$CI_ENVIRONMENT_SLUG'
+    - rsync -r review/* $SSH_USERNAME@filsinger.me:public/filsinger.me/review/$CI_ENVIRONMENT_SLUG
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    url: https://test.filsinger.me/review/$CI_ENVIRONMENT_SLUG/
+  only:
+    - branches
+  except:
+    - master
+
+deploy_production:
+  stage: deploy
+  script:
+    - echo "Deploy to production server"
+    - bundle exec jekyll build -d production
+    - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/production'
+    - rsync -r production/* $SSH_USERNAME@filsinger.me:public/filsinger.me/production
+  environment:
+    name: production
+    url: https://filsinger.me
+  when: manual
+  only:
+  - master
+
 deploy_staging:
   stage: deploy
   script:
     - echo "Deploy to staging server"
     - bundle exec jekyll build -d staging
     - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/staging'
-    - scp -r staging/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
+    - rsync -r staging/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
   environment:
     name: staging
     url: http://staging.filsinger.me
