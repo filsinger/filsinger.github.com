@@ -75,7 +75,8 @@ deploy_staging:
   script:
     - echo "Deploy to staging server"
     - bundle exec jekyll build -d staging
-    - scp -r staging/* $SSH_USERNAME@filsinger.me:public/staging
+    - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/staging'
+    - scp -r staging/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
   environment:
     name: staging
     url: http://staging.filsinger.me
