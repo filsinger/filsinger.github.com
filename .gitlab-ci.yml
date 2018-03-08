@@ -4,8 +4,8 @@ variables:
   JEKYLL_ENV: production
 
 before_script:
+  - apt-get update -qq && apt-get install -y -qq nodejs
   - bundle install
-  - apt-get install nodejs
 
 test:
   stage: test
