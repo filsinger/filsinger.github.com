@@ -90,7 +90,7 @@ deploy_review:
     - rsync -r review/* $SSH_USERNAME@filsinger.me:public/filsinger.me/review/$CI_ENVIRONMENT_SLUG
   environment:
     name: review/$CI_COMMIT_REF_NAME
-    url: https://test.filsinger.me/review/$CI_ENVIRONMENT_SLUG/
+    url: http://test.filsinger.me/review/$CI_ENVIRONMENT_SLUG/
   only:
     - branches
   except:
