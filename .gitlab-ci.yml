@@ -90,7 +90,7 @@ deploy_review:
     - rsync -r review/* $SSH_USERNAME@filsinger.me:public/filsinger.me/review/$CI_ENVIRONMENT_SLUG
   environment:
     name: review/$CI_COMMIT_REF_NAME
-    url: http://test.filsinger.me/review/$CI_ENVIRONMENT_SLUG/
+    url: https://staging.filsinger.me/review/$CI_ENVIRONMENT_SLUG/
   only:
     - branches
   except:
@@ -119,6 +119,6 @@ deploy_staging:
     - rsync -r staging/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
   environment:
     name: staging
-    url: http://staging.filsinger.me
+    url: https://staging.filsinger.me
   only:
   - master
