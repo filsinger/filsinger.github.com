@@ -5,7 +5,7 @@ title: Jason Filsinger - Credits
 
 # About this site
 
-This site was built by [Jason Filsinger](http://filsinger.me) using [Jekyll](https://github.com/mojombo/jekyll).
+This site was built by [Jason Filsinger](https://filsinger.me) using [Jekyll](https://github.com/mojombo/jekyll).
 
 ## Icons
 
@@ -19,9 +19,9 @@ This site was built by [Jason Filsinger](http://filsinger.me) using [Jekyll](htt
 
 ## Tools
 
+* [Emacs](https://www.gnu.org/software/emacs)
 * [Jekyll](https://github.com/mojombo/jekyll)
-* [Emacs](http://www.gnu.org/software/emacs)
-* [Git](http://git-scm.com)
+* [Git](https://git-scm.com)
 * [Rogue](https://github.com/jneen/rouge)
 * [Jekyll Categories](https://github.com/zroger/jekyll-categories)
 * [Kramdown](https://kramdown.gettalong.org/)
