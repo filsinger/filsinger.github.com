@@ -13,9 +13,9 @@ This site was built by [Jason Filsinger](http://filsinger.me) using [Jekyll](htt
 
 ## Fonts
 
-* [Open Sans](http://www.google.com/fonts/specimen/Open+Sans) by [Steve Matteson](http://en.wikipedia.org/wiki/Steve_Matteson) _([Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html))_
-* [Droid Sans Mono](http://www.google.com/fonts/specimen/Droid+Sans+Mono) by [Steve Matteson](http://en.wikipedia.org/wiki/Steve_Matteson) _([Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html))_
-* [Ubuntu](http://www.google.com/fonts/specimen/Ubuntu) by [Dalton Maag](http://www.daltonmaag.com/) _([Ubuntu Font License, 1.0](http://font.ubuntu.com/))_
+* [Open Sans](https://fonts.google.com/specimen/Open+Sans) by [Steve Matteson](http://en.wikipedia.org/wiki/Steve_Matteson) _([Apache License, version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html))_
+* [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) by [Paul D. Hunt]() _([Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web))_
+* [Ubuntu](https://fonts.google.com/specimen/Ubuntu) by [Dalton Maag](http://www.daltonmaag.com/) _([Ubuntu Font License, 1.0](http://font.ubuntu.com/))_
 
 ## Tools
 
