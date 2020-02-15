@@ -138,8 +138,8 @@ Running Emacs inside of tmux on OS X is pretty straightforward; add the followin
     (defun cut-to-osx (text &optional push)
       (let ((process-connection-type nil))
         (let ((proc (start-process "pbcopy" "*Messages*" "reattach-to-user-namespace" "pbcopy") ))
-		  (process-send-string proc text)
-		  (process-send-eof proc))))
+          (process-send-string proc text)
+          (process-send-eof proc))))
 
       (setq interprogram-cut-function 'cut-to-osx)
       (setq interprogram-paste-function 'paste-from-osx)

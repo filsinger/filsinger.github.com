@@ -50,11 +50,11 @@ The `common-init.el` is loaded from my `~/.emacs` file (with an extra variable, 
 Here is my `~/.emacs`:
 {% highlight cl %}
 (defvar emacs-sync-path (if (or (eq system-type 'cygwin)
-			     (eq system-type 'gnu/linux)
-			     (eq system-type 'linux)
-			     (eq system-type 'darwin))
-			  (concat (getenv "HOME") "/.emacs.git/")
-			  (concat (getenv "USERPROFILE") "/.emacs.git/"))
+                 (eq system-type 'gnu/linux)
+                 (eq system-type 'linux)
+                 (eq system-type 'darwin))
+              (concat (getenv "HOME") "/.emacs.git/")
+              (concat (getenv "USERPROFILE") "/.emacs.git/"))
   "emacs sync directory")
 (add-to-list 'load-path emacs-sync-path)
 (load "common-init.el")
@@ -97,7 +97,7 @@ path to the emacs `load-path` within my `common-init.el` file.
 {% highlight cl %}
 (add-to-list 'load-path (concat emacs-sync-path "/submodules/markdown-mode"))
 (setq auto-mode-alist
-	(cons '("\\.\\(md\\|markdown\\)$" . markdown-mode) auto-mode-alist))
+    (cons '("\\.\\(md\\|markdown\\)$" . markdown-mode) auto-mode-alist))
 (autoload 'markdown-mode "markdown-mode" "Markdown editing mode." t)
 (add-hook 'markdown-mode-hook 'turn-on-font-lock)
 (add-hook 'markdown-mode-hook 'hs-minor-mode)
