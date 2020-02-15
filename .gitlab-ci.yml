@@ -52,6 +52,7 @@ markdownlint:
     - echo "Preparing to lint"
   script:
     - mdl --style all --warnings _posts/
+  allow_failure: true
 
 build:
   stage: build
