@@ -69,6 +69,20 @@ deploy_review:
   except:
     - master
 
+deploy_staging:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - echo "Deploy to staging server"
+    - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/staging'
+    - rsync -r build/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
+  environment:
+    name: staging
+    url: https://staging.filsinger.me
+  only:
+    - master
+
 deploy_production:
   stage: deploy
   dependencies:
@@ -81,19 +95,5 @@ deploy_production:
     name: production
     url: https://filsinger.me
   when: manual
-  only:
-    - master
-
-deploy_staging:
-  stage: deploy
-  dependencies:
-    - build
-  script:
-    - echo "Deploy to staging server"
-    - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/staging'
-    - rsync -r build/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
-  environment:
-    name: staging
-    url: https://staging.filsinger.me
   only:
     - master
