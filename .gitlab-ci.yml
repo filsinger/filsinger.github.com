@@ -45,14 +45,14 @@ stages:
   - build
   - deploy
 
-markdownlint:
-  stage: build
-  image: pipelinecomponents/markdownlint:latest
-  before_script:
-    - echo "Preparing to lint"
-  script:
-    - mdl --style all --warnings _posts/
-  allow_failure: true
+# markdownlint:
+#   stage: build
+#   image: pipelinecomponents/markdownlint:latest
+#   before_script:
+#     - echo "Preparing to lint"
+#   script:
+#     - mdl --style all --warnings _posts/
+#   allow_failure: true
 
 build:
   stage: build
