@@ -3,6 +3,10 @@ image: jekyll/builder
 variables:
   JEKYLL_ENV: production
 
+cache:
+  paths:
+    - vendor/
+
 before_script:
   ##
   ## Run ssh-agent (inside the build environment)
@@ -35,7 +39,7 @@ before_script:
   ##
   ## bundle install
   ##
-  - bundle install
+  - bundle install --path vendor
 
 stages:
   - test
