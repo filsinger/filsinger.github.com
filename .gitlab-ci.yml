@@ -45,22 +45,22 @@ stages:
 test:
   stage: test
   script:
-  - bundle exec jekyll build -d test
+    - bundle exec jekyll build -d test
   artifacts:
     paths:
-    - test
+      - test
   except:
-  - master
+    - master
 
 build:
   stage: deploy
   script:
-  - bundle exec jekyll build -d public
+    - bundle exec jekyll build -d public
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
 
 deploy_review:
   stage: deploy
@@ -89,7 +89,7 @@ deploy_production:
     url: https://filsinger.me
   when: manual
   only:
-  - master
+    - master
 
 deploy_staging:
   stage: deploy
@@ -102,4 +102,4 @@ deploy_staging:
     name: staging
     url: https://staging.filsinger.me
   only:
-  - master
+    - master
