@@ -45,6 +45,15 @@ stages:
   - build
   - deploy
 
+markdownlint:
+  stage: build
+  image: pipelinecomponents/markdownlint:latest
+  script:
+    - mdl --style all --warnings _posts/
+  only:
+    changes:
+      - "*.md"
+
 build:
   stage: build
   script:
