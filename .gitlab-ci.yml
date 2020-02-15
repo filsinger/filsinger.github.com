@@ -42,37 +42,25 @@ before_script:
   - bundle install --path vendor
 
 stages:
-  - test
   - build
   - deploy
 
-test:
-  stage: test
-  script:
-    - bundle exec jekyll build -d test
-  artifacts:
-    paths:
-      - test
-  except:
-    - master
-
 build:
-  stage: deploy
+  stage: build
   script:
     - bundle exec jekyll build -d public
   artifacts:
     paths:
       - public
-  only:
-    - master
 
 deploy_review:
   stage: deploy
+  dependencies:
+    - build
   script:
     - echo "Deploy a review"
-    - bundle exec jekyll build -d review
     - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/review/$CI_ENVIRONMENT_SLUG'
-    - rsync -r review/* $SSH_USERNAME@filsinger.me:public/filsinger.me/review/$CI_ENVIRONMENT_SLUG
+    - rsync -r public/* $SSH_USERNAME@filsinger.me:public/filsinger.me/review/$CI_ENVIRONMENT_SLUG
   environment:
     name: review/$CI_COMMIT_REF_NAME
     url: https://staging.filsinger.me/review/$CI_ENVIRONMENT_SLUG/
@@ -83,11 +71,12 @@ deploy_review:
 
 deploy_production:
   stage: deploy
+  dependencies:
+    - build
   script:
     - echo "Deploy to production server"
-    - bundle exec jekyll build -d production
     - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/production'
-    - rsync -r production/* $SSH_USERNAME@filsinger.me:public/filsinger.me/production
+    - rsync -r build/* $SSH_USERNAME@filsinger.me:public/filsinger.me/production
   environment:
     name: production
     url: https://filsinger.me
@@ -97,11 +86,12 @@ deploy_production:
 
 deploy_staging:
   stage: deploy
+  dependencies:
+    - build
   script:
     - echo "Deploy to staging server"
-    - bundle exec jekyll build -d staging
     - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/staging'
-    - rsync -r staging/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
+    - rsync -r build/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
   environment:
     name: staging
     url: https://staging.filsinger.me
