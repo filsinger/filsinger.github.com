@@ -76,7 +76,7 @@ deploy_staging:
   script:
     - echo "Deploy to staging server"
     - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/staging'
-    - rsync -r build/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
+    - rsync -r public/* $SSH_USERNAME@filsinger.me:public/filsinger.me/staging
   environment:
     name: staging
     url: https://staging.filsinger.me
@@ -90,7 +90,7 @@ deploy_production:
   script:
     - echo "Deploy to production server"
     - ssh $SSH_USERNAME@filsinger.me 'mkdir -p public/filsinger.me/production'
-    - rsync -r build/* $SSH_USERNAME@filsinger.me:public/filsinger.me/production
+    - rsync -r public/* $SSH_USERNAME@filsinger.me:public/filsinger.me/production
   environment:
     name: production
     url: https://filsinger.me
