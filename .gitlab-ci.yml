@@ -50,9 +50,6 @@ markdownlint:
   image: pipelinecomponents/markdownlint:latest
   script:
     - mdl --style all --warnings _posts/
-  only:
-    changes:
-      - "*.md"
 
 build:
   stage: build
