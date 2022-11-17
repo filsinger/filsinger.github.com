@@ -39,7 +39,7 @@ before_script:
   ##
   ## bundle install
   ##
-  - bundle install --path vendor
+  - bundle install --local path vendor
 
 stages:
   - build
