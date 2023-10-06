@@ -9,3 +9,4 @@ build-site.sh
 vendor/
 .jekyll-cache/
 keybase.txt
+.bundle/
