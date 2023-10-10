@@ -641,9 +641,15 @@ div.logo {
     margin: 0 auto 0 auto;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 430px) and (max-width: 767px) {
     body{
         width: 100%;
+    }
+
+    article {
+        /* width: 100%; */
+        max-width: 100%;
+        padding: 0px;
     }
 
     #pagefooter {
@@ -668,21 +674,21 @@ div.logo {
                 display: none;
             }
             p{
-                width: 300px;
+                width: 100%;
             }
         }
     }
 
     div {
         &.stuffing, &#wrapper {
-            width: 300px;
+            width: 100%;
         }
     }
 
     .card {
-        width: 300px;
+        width: 100%;
         &.left, &.right, &.large {
-            width: 300px;
+            width: 100%;
             float: none;
         }
     }
@@ -698,6 +704,11 @@ div.logo {
     body, time, code, time.right, article header address, pre code {
         font-size: 12pt;
     }
+
+    pre code {
+        border-radius: 0px;
+    }
+
     h1 {
         font-size: 16pt;
     }
