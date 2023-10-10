@@ -182,7 +182,7 @@ header#pageheader {
 
     #category {
         float: right;
-        
+
         a {
             opacity: 0.5;
             &:hover{
@@ -190,7 +190,7 @@ header#pageheader {
             }
         }
     }
-    
+
     img {
         display: inline-block;
         top: 3pt;
@@ -292,7 +292,7 @@ article {
             cursor: default;
         }
     }
-    
+
     address {
         float: left;
         clear: left;
@@ -303,7 +303,7 @@ article {
         cursor: default;
         width: 400px;
     }
-    
+
     ul {
         &.tags {
             display: block;
@@ -323,7 +323,7 @@ article {
                 height: 20px;
                 position: relative;
             }
-            
+
             &:hover {
                 width: auto;
                 opacity: 1.0;
@@ -343,7 +343,7 @@ article {
             }
         }
     }
-    
+
     footer {
         padding: 5 10 5 10;
         font-family: 12pt, $font_footer;
@@ -390,7 +390,7 @@ footer#pagefooter {
             text-decoration: none;
         }
     }
-    
+
     .column {
         margin-top: 20pt;
         width: 50%;
@@ -399,7 +399,7 @@ footer#pagefooter {
         bottom: 0;
         position: static;
     }
-    
+
     ul {
         padding: 0;
         margin-top: 5pt;
@@ -416,7 +416,7 @@ footer#pagefooter {
             margin: 0;
         }
     }
-    
+
     h1 {
         padding: 0;
         cursor: default;
@@ -428,7 +428,7 @@ footer#pagefooter {
         display: block;
         margin: 0;
     }
-    
+
     .row {
         display: block;
         clear: both;
@@ -503,7 +503,7 @@ footer#pagefooter {
     ul, ol {
         margin: 10px 0 0 0;
         padding: 0;
-        list-style: none; 
+        list-style: none;
     }
 
     .stuffing {
@@ -555,7 +555,7 @@ footer#pagefooter {
         }
     }
 
-    li a#pgpkey {                    
+    li a#pgpkey {
         background-image: url(#{$path_logos}/gnupg/logo.svg);
         background-position: 8px center;
         background-repeat: no-repeat;
@@ -672,7 +672,7 @@ div.logo {
             }
         }
     }
-    
+
     div {
         &.stuffing, &#wrapper {
             width: 300px;
@@ -686,7 +686,7 @@ div.logo {
             float: none;
         }
     }
-    
+
     article .card img, div.big.logo, ul.posts li span {
         display: none;
     }
