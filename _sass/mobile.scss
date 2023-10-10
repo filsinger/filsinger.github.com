@@ -1,27 +1,12 @@
 @media only screen and (min-width: 430px) and (orientation: portrait) {
-    body{
-        width: 100%;
-    }
-    div {
-        &.stuffing, &#wrapper {
-            width: 100%;
-        }
-    }
     article {
         padding: 0px;
     }
 }
 
 @media only screen and (min-width: 932px) and (orientation: landscape) {
-    body {
-        width: 100%;
-    }
-    div{
-        &.stuffing, &#wrapper{
-            width: 100%;
-        }
-    }
+
     article {
-        padding: 0px;
+        padding: 0px 10px 0px 10px;
     }
 }
