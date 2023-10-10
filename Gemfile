@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem "classifier-reborn", "~> 2.3"
-gem "jekyll", "~> 3.9"
+gem "jekyll", "~> 4.3"
 gem "jekyll-categories", "~> 0.0.2"
 gem "jekyll-feed", "~> 0.15.1"
 gem "jekyll-seo-tag", "~> 2.8"
