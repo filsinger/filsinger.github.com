@@ -1,6 +1,7 @@
 ---
 layout: post
 title: System Clipboard With tmux
+author: jason
 tags: ['tmux', 'osx', 'cygwin', 'linux', 'emacs']
 category: workflow
 comments: false

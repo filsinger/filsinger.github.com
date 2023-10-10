@@ -1,31 +1,35 @@
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta charset='utf-8'/>
     <title>filsinger.me - {{ page.title }}</title>
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Source+Code+Pro' rel='stylesheet' type='text/css'>
-
-    {% asset screen.css %}
-    {% asset syntax.css %}
-    {% feed_meta %}
-    <link rel="shortcut icon" href="{% asset favicon.ico @path %}" />
-    <link rel="icon" type="image/png" href="{% asset favicon.png @path %}" />
 
     <meta name="author" content="Jason Filsinger"/>
-    <meta charset="utf-8">
+    <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming" />
     <meta name="robots" content="noodp, noydir{% if page.noindex == true %}, noindex{% endif %}" />
     {% if page.noindex == true %}<meta name="googlebot" content="noarchive"/>{% endif %}
     {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
     {% case page.license %}
     {% when "cc-by-nc-sa" %}<meta name="copyright" content="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License." />
-    {% when "copyright" %}<meta name="copyright" content="&copy; 2011-2012 Jason Filsinger" />
+    {% when "copyright" %}<meta name="copyright" content="&copy; 2011-{{ site.time | date: '%Y' }} Jason Filsinger" />
     {% else %}{% endcase %}
-    <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming">
-
     <!-- IOS meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon-precomposed" href="{% asset ios.png @path %}" />
-
+    <!-- <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Source+Code+Pro' /> -->
+    <link rel='stylesheet' type='text/css' href='/assets/css/fonts.css' />
+    <link rel='stylesheet' type='text/css' href='/assets/css/styles.css'>
+    <link rel='stylesheet' type='text/css' href='/assets/css/print.css'>
+    {% feed_meta %}
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#222222">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#eeeeee">
     {% if page.myopenid-account %}<!-- OpenID -->
     <link rel="openid.server" href="http://www.myopenid.com/server" />
     <link rel="openid.delegate" href="http://{{page.myopenid-account}}.myopenid.com/" />
@@ -33,4 +37,6 @@
     <link rel="openid2.provider" href="http://www.myopenid.com/server" />
     <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username={{page.myopenid-account}}.myopenid.com" />
     {% endif %}
+
+    {% seo %}
 </head>

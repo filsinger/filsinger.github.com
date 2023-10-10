@@ -1,8 +1,11 @@
 ---
 layout: simple
 title: Jason Filsinger
+author: jason
 meta-description: "About Jason Filsinger"
 ---
+
+{% assign author = site.data.authors[page.author] %}
 
 <section class="left card">
     <div class="stuffing">
@@ -17,22 +20,23 @@ meta-description: "About Jason Filsinger"
     Game developer, programmer, zombie food.
 </section>
 
-<section class="right card">
+<section class="right card social">
     <header>
         <h1>Social</h1>
     </header>
-    <ul>
-        <li><a rel="me" href="https://mastodon.social/@filsinger">Mastodon</a></li>
-        <li><a href="https://twitter.com/filsinger">Twitter</a></li>
-        <li><a href="https://github.com/filsinger">GitHub</a></li>
-    </ul>
+    {% include social_list.html %}
 </section>
 
+{% if author.pgp != null %}
 <section class="right card">
     <header>
         <h1>PGP Public Key</h1>
     </header>
-    <ul>
-        <li><a href="https://filsinger.me/gpg/a9ae77114d1d76ccfaf1a0be2b97e3d7bd9cbd14.pub">2B97 E3D7 BD9C BD14</a>
+
+    <ul class="pgp">
+        {% for pgp in author.pgp %}
+        <li><a id="pgpkey" rel="me" href="{{ pgp.url }}" title="{{ pgp.tooltip }}">{{ pgp.name }}</a></li>
+        {% endfor %}
     </ul>
 </section>
+{% endif %}

@@ -1,2 +1,17 @@
-filsinger:
-    twitter: filsinger
+jason:
+  name: Jason Filsinger
+  github_username: filsinger
+  flickr_username: filsinger
+
+  pgp:
+    - name: 2B97 E3D7 BD9C BD14
+      url: /gpg/a9ae77114d1d76ccfaf1a0be2b97e3d7bd9cbd14.pub
+      tooltip: ASCII Armored PGP Public Key
+
+  mastodon:
+    - username: filsinger
+      instance: mastodon.social
+
+  pixelfed:
+    - username: filsinger
+      instance: pixelfed.social

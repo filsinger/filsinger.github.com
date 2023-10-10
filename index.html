@@ -1,11 +1,13 @@
 ---
 layout: simple
 title: Jason Filsinger
+author: jason
 meta-description: "Jason Filsinger's Blog"
 ---
 
 <section class="left card">
-    <div class="stuffing">{% include big_site_logo.html %}</div>
+    {% include big_site_logo.html %}
+    <!-- <div class="stuffing">{% include big_site_logo.html %}</div> -->
 </section>
 
 <section class="right card">
@@ -15,15 +17,11 @@ meta-description: "Jason Filsinger's Blog"
     Game developer, programmer, zombie food.
 </section>
 
-<section class="right card">
+<section class="right card social">
     <header>
         <h1>Social</h1>
     </header>
-    <ul>
-        <li><a rel="me" href="https://mastodon.social/@filsinger">Mastodon</a></li>
-        <li><a href="https://twitter.com/filsinger">Twitter</a></li>
-        <li><a href="https://github.com/filsinger">GitHub</a></li>
-    </ul>
+    {% include social_list.html %}
 </section>
 
 {% if site.posts != empty %}
@@ -33,7 +31,10 @@ meta-description: "Jason Filsinger's Blog"
     </header>
     <ul class="posts">
         {% for post in site.posts %}
-        <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y - %m - %d" }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+            <!-- <a href="{{ post.url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y - %m - %d" }}</time> &raquo; {{ post.title }}</a> -->
+        </li>
         {% endfor %}
     </ul>
 </section>

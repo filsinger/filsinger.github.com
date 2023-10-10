@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs, Git, Business & Pleasure
+author: jason
 tags: ['emacs', 'git']
 category: workflow
 comments: false

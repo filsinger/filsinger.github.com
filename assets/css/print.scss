@@ -1,0 +1,61 @@
+---
+---
+
+$path_site_images: '/assets/images/site';
+
+@media print {
+    a, a:hover, article a, article a:hover {
+        color: #000;
+        background: none;
+        border: none;
+        opacity: 1.0;
+    }
+
+    
+
+    footer#pagefooter {
+        //    display: none;
+        background: none;
+        //div.column.left { display: none; }
+        //div.column.left#license { display: block; }
+
+        // ul#posts { display: none; }
+        // ul#tags { display: none; }
+        ul.commoninfo {
+            display: none;
+        }
+    }
+
+    header#pageheader {
+        background: none;
+        color: #000;
+
+        div#sitelogo a {
+            background-image: url(#{$path_site_images}/filsinger-small.svg);
+            color: #000;
+        }
+
+        div.stuffing {
+            max-width: none;
+        }
+
+        div#category {
+            display: none;
+        }
+    }
+
+    article {
+        ul.tags {
+            display: none;
+        }
+    }
+
+    div#wrapper {
+        max-width:100%!important;
+        width:100%!important;
+        padding:0!important;
+        margin:0!important;
+    }
+
+    
+}

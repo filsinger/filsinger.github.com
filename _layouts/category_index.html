@@ -1,21 +1,25 @@
+<!-- -*- coding: utf-8 -*- -->
 <!DOCTYPE html>
 <html>
-  {% include html_head.html %}
-  <body class="categoryindex">
-    {% include page_header.html %}
-    <div id="wrapper">
-      <article>
-      	<div id="related">
-	  <h1>Category Posts: {{ page.category | capitalize }}</h1>
-	  <ul class="posts">
-	    {% for post in site.categories[page.category] %}
-	    <li><span>{{ post.date | date_to_long_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	    {% endfor %}
-	  </ul>
-	</div>
-      </article>
-    </div>
-    {% include page_footer.html %}
-  </body>
-</html>
+    {% include html_head.html %}
+    <body class="categoryindex">
+        {% include page_header.html %}
+        <div id="wrapper">
+            <article>
+                <div id="related">
+                    <h1>Category Posts: {{ page.category | capitalize }}</h1>
+                    <ul class="posts">
+                        {% for post in site.categories[page.category] %}
+                        <li>
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y - %m - %d" }}</time> &raquo;
+                            <a type="text/html" href="{{ post.url }}">{{ post.title }}</a>
+                        </li>
+                        {% endfor %}
 
+                    </ul>
+                </div>
+            </article>
+        </div>
+        {% include page_footer.html %}
+    </body>
+</html>

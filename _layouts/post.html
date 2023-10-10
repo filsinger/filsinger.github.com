@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     {% include html_head.html %}
     <body>
         {% include page_header.html %}
@@ -7,8 +8,11 @@
             <article>
                 <header>
                     <h1>{{ page.title }}</h1>
-                    <address>By <a href="/">Jason Filsinger</a></address>
-                    <time class="right" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+                    {% if page.author != null %}
+                    {% assign author = site.data.authors[page.author] %}
+                    <address>By <a rel="author" type="text/html" href="/about" title="{{ author.name }}">{{ author.name }}</a></address>
+                    {% endif %}
+                    <time class="right" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y %B %d" }}</time>
                     <ul class="tags">{% for t in page.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
                 </header>
                 <section>
@@ -20,15 +24,15 @@
             </article>
             <div class="stuffing">
                 <div class="license">
-                    <a class="tooltiptriger" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-                        <img alt="Creative Commons License" style="border-width:0" src="{% asset by-nc-sa.svg @path %}" />
+                    {% case page.license %}
+                    {% when "copyright" %}
+                    {% else %}
+                    <a class="tooltiptriger" rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">
+                        <img alt="Creative Commons License" style="border-width:0" src="/assets/images/buttons/88x31/by-nc-sa.svg" />
                     </a>
-                </div>
-                <div class="social">
-                    <a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | uri_escape }}" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="https://www.reddit.com/static/spreddit7.gif" alt="submit to reddit"/> </a>
+                    {% endcase %}
                 </div>
             </div>
-            {% include disqus_comments.html %}
         </div>
         {% include page_footer.html %}
     </body>

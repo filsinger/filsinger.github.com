@@ -6,9 +6,12 @@ encoding: utf-8
 author: filsinger
 title: filsinger.me
 utl: filsinger.me
-description: Jason Filsinger's Blog
-twitter_username: filsinger
-
+description: Jason Filsinger's Website
+github_username: filsinger
+mastodon:
+- username: filsinger
+  instance: mastodon.social
+        
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -18,6 +21,9 @@ assets:
     css:  sass
     js:   uglifier
 
+sass:
+  style: compressed
+
 caching:
   path: ".jekyll-cache/assets"
   type: file # Possible values: memory, file
@@ -26,3 +32,12 @@ caching:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-categories
+
+defaults:
+  -
+    scope:
+      path:            "errormessages/"
+    values:
+      sitemap:         false

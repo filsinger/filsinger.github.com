@@ -5,7 +5,7 @@ title: Jason Filsinger - Credits
 
 # About this site
 
-This site was built by [Jason Filsinger](https://filsinger.me) using [Jekyll](https://github.com/mojombo/jekyll).
+This site was built by [Jason Filsinger]({{ site.utl }}/about/) using [Jekyll](https://github.com/mojombo/jekyll).
 
 ## Icons
 

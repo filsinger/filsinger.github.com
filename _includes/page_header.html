@@ -1,15 +1,12 @@
-{% include browser_support_test.html %}
-{% include analytics.html %}
-
 <header id="pageheader">
-  <div class="stuffing">
-    <div id="sitelogo">
-      <a href="/">filsinger.me</a>
+    <div class="stuffing">
+        <div id="sitelogo">
+            <a href="/">filsinger.me</a>
+        </div>
+        {% if page.category != null %}
+        <div id="category">
+            <a href="{% category_url page.category %}">{{ page.category }}</a>
+        </div>
+        {% endif %}
     </div>
-  {% if page.category != null %}
-    <div id="category">
-      <a href="{% category_url page.category %}">{{ page.category }}</a>
-    </div>
-  {% endif %}
-  </div>
 </header>

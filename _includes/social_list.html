@@ -1,0 +1,56 @@
+{% assign author = site.data.authors[page.author] %}
+
+
+{% if author != null %}
+<ul>
+    {% if author.mastodon != null %}
+    {% for mastodon in author.mastodon %}
+    <li><a rel="me" id="mastodon" href="https://{{ mastodon.instance }}/@{{ mastodon.username }}">Mastodon</a></li>
+    {% endfor %}
+    {% endif %}
+
+    {% if author.pixelfed != null %}
+    {% for pixelfed in author.pixelfed %}
+    <li><a rel="me" id="pixelfed" href="https://{{ pixelfed.instance }}/@{{ pixelfed.username }}">Pixelfed</a></li>
+    {% endfor %}
+    {% endif %}
+
+    {% if author.github_username != null %}
+    <li><a rel="me" id="github" href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+    {% endif %}
+
+    {% if author.flickr_username != null %}
+    <li><a rel="me" id="flickr" href="https://flickr.com/{{ site.flickr_username }}">Flickr</a></li>
+    {% endif %}
+</ul>
+{% else %}
+
+<ul>
+    {% if site.mastodon != null %}
+    {% for mastodon in site.mastodon %}
+    <li><a rel="me" id="mastodon" href="https://{{ mastodon.instance }}/@{{ mastodon.username }}">Mastodon</a></li>
+    {% endfor %}
+    {% else %}
+    <li><a rel="me" id="mastodon" href="https://mastodon.social/@filsinger">Mastodon</a></li>
+    {% endif %}
+
+    {% if site.pixelfed != null %}
+    {% for pixelfed in site.pixelfed %}
+    <li><a rel="me" id="pixelfed" href="https://{{ pixelfed.instance }}/@{{ pixelfed.username }}">Pixelfed</a></li>
+    {% endfor %}
+    {% else %}
+    <li><a rel="me" id="pixelfed" href="https://pixelfed/@filsinger">Pixelfed</a></li>
+    {% endif %}
+
+    {% if site.github_username != null %}
+    <li><a rel="me" id="github" href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+    {% endif %}
+
+    {% if site.flickr_username != null %}
+    <li><a rel="me" id="flickr" href="https://flickr.com/{{ site.flickr_username }}">Flickr</a></li>
+    {% else %}
+    <li><a rel="me" id="flickr" href="https://flickr.com/filsinger">Flickr</a></li>
+    {% endif %}
+
+</ul>
+{% endif %}
