@@ -26,6 +26,10 @@ This site was built by [Jason Filsinger]({{ site.utl }}/about/) using [Jekyll](h
 * [Jekyll Categories](https://github.com/zroger/jekyll-categories)
 * [Kramdown](https://kramdown.gettalong.org/)
 
+## Hosting
+
+This site is hosted on [GitHub Pages](https://github.com/filsinger/filsinger.github.com).
+
 ## Source
 
-The source code for this website is available on [github](https://github.com/filsinger/filsinger.me).
+The source code for this website is available on [github](https://github.com/filsinger/filsinger.github.com).
