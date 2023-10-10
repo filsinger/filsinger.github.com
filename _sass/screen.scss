@@ -641,28 +641,6 @@ div.logo {
     margin: 0 auto 0 auto;
 }
 
-@media only screen and (max-width: 768px) and (orientation: portrait) {
-    body{
-        width: 768px;
-    }
-    div {
-        &.stuffing, &#wrapper {
-            width: 730px;
-        }
-    }                 
-}
-
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-    body {
-        width: 1024px;
-    }
-    div{
-        &.stuffing, &#wrapper{
-            width: 1004px;
-        }
-    }
-}
-
 @media only screen and (max-width: 480px) {
     body{
         width: 100%;
@@ -742,4 +720,3 @@ div.logo {
         margin: 0;
     }
 }
-
