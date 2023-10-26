@@ -25,11 +25,6 @@
             "href": "https://mastodon.social/users/filsinger"
         },
         {
-            "rel": "self",
-            "type": "application/activity+json",
-            "href": "https://pixelfed.social/users/filsinger"
-        },
-        {
             "rel": "http://ostatus.org/schema/1.0/subscribe",
             "template": "https://mastodon.social/authorize_interaction?uri={uri}"
         }
