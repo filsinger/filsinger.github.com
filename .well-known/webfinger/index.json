@@ -9,8 +9,13 @@
         {
             "rel": "http://webfinger.net/rel/profile-page",
             "type": "text/html",
-            "href": "https://mastodon.social/@filsinger"
+            "href": "https://filsinger.me/about/"
         },
+        {
+            "rel": "http://webfinger.net/rel/avatar",
+            "type": "image/svg+xml",
+            "href": "https://filsinger.me/assets/images/site/filsinger-big.svg"
+        }
         {
             "rel": "self",
             "type": "application/activity+json",
