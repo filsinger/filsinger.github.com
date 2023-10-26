@@ -3,7 +3,10 @@
     "aliases": [
         "https://mastodon.social/@filsinger",
         "https://mastodon.social/users/filsinger",
-        "filsinger@mastodon.social"
+        "filsinger@mastodon.social",
+        "https://pixelfed.social/@filsinger",
+        "https://pixelfed.social/users/filsinger",
+        "filsinger@pixelfed.social"
     ],
     "links": [
         {
