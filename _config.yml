@@ -41,3 +41,5 @@ defaults:
       path:            "errormessages/"
     values:
       sitemap:         false
+
+include: [".well-known"]
