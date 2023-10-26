@@ -2,10 +2,10 @@
     "subject": "acct:jason@filsinger.me",
     "aliases": [
         "https://mastodon.social/@filsinger",
-        "https://mastodon.social/users/filsinger",
-        "filsinger@mastodon.social",
         "https://pixelfed.social/@filsinger",
+        "https://mastodon.social/users/filsinger",
         "https://pixelfed.social/users/filsinger",
+        "filsinger@mastodon.social",
         "filsinger@pixelfed.social"
     ],
     "links": [
