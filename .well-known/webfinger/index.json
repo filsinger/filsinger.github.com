@@ -15,7 +15,7 @@
             "rel": "http://webfinger.net/rel/avatar",
             "type": "image/svg+xml",
             "href": "https://filsinger.me/assets/images/site/filsinger-big.svg"
-        }
+        },
         {
             "rel": "self",
             "type": "application/activity+json",
