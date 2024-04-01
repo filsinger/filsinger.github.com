@@ -70,7 +70,7 @@ GEM
       ffi (~> 1.0)
     rdiscount (2.2.7.3)
     rexml (3.2.6)
-    rouge (4.2.0)
+    rouge (4.2.1)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
