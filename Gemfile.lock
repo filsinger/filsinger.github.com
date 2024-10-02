@@ -71,7 +71,7 @@ GEM
     rdiscount (2.2.7.3)
     rexml (3.3.6)
       strscan
-    rouge (4.3.0)
+    rouge (4.4.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -102,7 +102,7 @@ DEPENDENCIES
   kramdown-parser-gfm (~> 1.1)
   minima (~> 2.5)
   rdiscount (~> 2.2)
-  rouge (~> 4.3)
+  rouge (~> 4.4)
   safe_yaml (~> 1.0)
   sass (~> 3.7)
   uglifier (~> 4.2)
