@@ -8,7 +8,7 @@
     <meta name="author" content="{{ author.name }}"/>
     {% if author.mastodon != null %}
     {% for mastodon in author.mastodon %}
-    <meta name="fediverse:creator" content="@{{ page.author.mastodon.username }}@{{ page.author.mastodon.instance }}" />
+    <meta name="fediverse:creator" content="@{{ mastodon.username }}@{{ mastodon.instance }}" />
     {% endfor %}
     {% endif %}
     {% else %}
