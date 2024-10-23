@@ -1,10 +1,21 @@
+{% assign author = site.data.authors[page.author] %}
 <head>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
     <meta charset='utf-8'/>
     <title>filsinger.me - {{ page.title }}</title>
 
+    {% if author != null %}
+    <meta name="author" content="{{ author.name }}"/>
+    {% if author.mastodon != null %}
+    {% for mastodon in author.mastodon %}
+    <meta name="fediverse:creator" content="@{{ page.author.mastodon.username }}@{{ page.author.mastodon.instance }}" />
+    {% endfor %}
+    {% endif %}
+    {% else %}
     <meta name="author" content="Jason Filsinger"/>
-    <meta name="keywords" content="jason, filsinger, {% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}programming" />
+    {% endif %}
+
+    <meta name="keywords" content="{% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}jason, filsinger" />
     <meta name="robots" content="noodp, noydir{% if page.noindex == true %}, noindex{% endif %}" />
     {% if page.noindex == true %}<meta name="googlebot" content="noarchive"/>{% endif %}
     {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
@@ -15,7 +26,6 @@
     <!-- IOS meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <!-- <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Source+Code+Pro' /> -->
     <link rel='stylesheet' type='text/css' href='/assets/css/fonts.css' />
     <link rel='stylesheet' type='text/css' href='/assets/css/styles.css'>
     <link rel='stylesheet' type='text/css' href='/assets/css/print.css'>
