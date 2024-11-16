@@ -16,11 +16,11 @@
     {% endif %}
 
     {% if author.github_username != null %}
-    <li><a rel="me" id="github" href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+    <li><a rel="me" id="github" href="https://github.com/{{ author.github_username }}">GitHub</a></li>
     {% endif %}
 
     {% if author.flickr_username != null %}
-    <li><a rel="me" id="flickr" href="https://flickr.com/{{ site.flickr_username }}">Flickr</a></li>
+    <li><a rel="me" id="flickr" href="https://flickr.com/{{ author.flickr_username }}">Flickr</a></li>
     {% endif %}
 </ul>
 {% else %}
