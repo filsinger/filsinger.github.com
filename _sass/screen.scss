@@ -1,14 +1,14 @@
 // Fonts
-$font_code: 'Source Code Pro', sans-serif;
+$font_code: 'Hack', monospace;
 $font_body: 'Open Sans', sans-serif;
-$font_headding: 'Ubuntu', sans-serif;
-$font_footer: "Courier New", Courier, mono, monospace;
-
+$font_headding: 'Hack', monospace;
+$font_footer: 'Hack Regular', monospace;
 
 $path_images: '/assets/images';
 $path_site_images: '/assets/images/site';
 $path_icons: '/assets/images/icons';
 $path_logos: '/assets/images/logos';
+$path_fonts: '/assets/fonts/';
 
 * {
     display: block;
