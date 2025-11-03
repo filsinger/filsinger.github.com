@@ -1,14 +1,17 @@
 $light_color_surround_header: rgba(253, 89, 98, 0.6);
 $light_color_surround_link:   rgba(153, 191, 253, 1.0);
 $light_color_surround_text:   #888888;
+$light_color_background: #F2F2F2;
 $light_color_secondary_background: #222222;
-$light_color_background: #ffffff;
+$light_color_secondary_background_gradient: #202020;
 $light_color_text: #222222;
 $light_color_text_faded: #cccece;
 $light_color_link_color: #3861ac;
 $light_color_link_hover_color: #8085A8;
 $light_color_link_visited_color: #BC6C25;
 $light_color_link_visited_hover_color: #5F627D;
+$light_color_link_focus_color: #FF0000;
+$light_color_link_focus_background: #000000;
 $light_color_footer_background: none;
 $light_color_footer_text: #AAAE8E;
 $light_color_page_header_text: #eeeeee;
@@ -19,12 +22,15 @@ $dark_color_surround_link:   rgba(153, 191, 253, 1.0);
 $dark_color_surround_text:   #888888;
 $dark_color_background: #333333;
 $dark_color_secondary_background: #222222;
+$dark_color_secondary_background_gradient: #202020;
 $dark_color_text: #FEFAE0;
 $dark_color_text_faded: #cccece;
 $dark_color_link_color: #DDA15E;
 $dark_color_link_hover_color: #8085A8;
 $dark_color_link_visited_color: #BC6C25;
 $dark_color_link_visited_hover_color: #5F627D;
+$dark_color_link_focus_color: #FF0000;
+$dark_color_link_focus_background: #000000;
 $dark_color_footer_background: none;
 $dark_color_footer_text: #cccece;
 $dark_color_page_header_text: #eeeeee;
@@ -38,12 +44,15 @@ $dark_color_text_code: #eeeeee;
         --color_surround_text:            #{$dark_color_surround_text};
         --color_background:               #{$dark_color_background};
         --color_secondary_background:     #{$dark_color_secondary_background};
+        --color_secondary_background_gradient:     #{$dark_color_secondary_background_gradient};
         --color_text:                     #{$dark_color_text};
         --color_text_faded:               #{$dark_color_text_faded};
         --color_link_color:               #{$dark_color_link_color};
         --color_link_hover_color:         #{$dark_color_link_hover_color};
         --color_link_visited_color:       #{$dark_color_link_visited_color};
         --color_link_visited_hover_color: #{$dark_color_link_visited_hover_color};
+        --color_link_focus_color:         #{$dark_color_link_focus_color};
+        --color_link_focus_background:    #{$dark_color_link_focus_background};
         --color_footer_background:        #{$dark_color_footer_background};
         --color_footer_text:              #{$dark_color_footer_text};
         --color_page_header_text:         #{$dark_color_page_header_text};
@@ -58,12 +67,15 @@ $dark_color_text_code: #eeeeee;
         --color_surround_text:            #{$light_color_surround_text};
         --color_background:               #{$light_color_background};
         --color_secondary_background:     #{$light_color_secondary_background};
+        --color_secondary_background_gradient:     #{$light_color_secondary_background_gradient};
         --color_text:                     #{$light_color_text};
         --color_text_faded:               #{$light_color_text_faded};
         --color_link_color:               #{$light_color_link_color};
         --color_link_hover_color:         #{$light_color_link_hover_color};
         --color_link_visited_color:       #{$light_color_link_visited_color};
         --color_link_visited_hover_color: #{$light_color_link_visited_hover_color};
+        --color_link_focus_color:         #{$light_color_link_focus_color};
+        --color_link_focus_background:    #{$light_color_link_focus_background};
         --color_footer_background:        #{$light_color_footer_background};
         --color_footer_text:              #{$light_color_footer_text};
         --color_page_header_text:         #{$light_color_page_header_text};
@@ -77,12 +89,15 @@ $dark_color_text_code: #eeeeee;
         --color_surround_text:            #{$dark_color_surround_text};
         --color_background:               #{$dark_color_background};
         --color_secondary_background:     #{$dark_color_secondary_background};
+        --color_secondary_background_gradient:     #{$dark_color_secondary_background_gradient};
         --color_text:                     #{$dark_color_text};
         --color_text_faded:               #{$dark_color_text_faded};
         --color_link_color:               #{$dark_color_link_color};
         --color_link_hover_color:         #{$dark_color_link_hover_color};
         --color_link_visited_color:       #{$dark_color_link_visited_color};
         --color_link_visited_hover_color: #{$dark_color_link_visited_hover_color};
+        --color_link_focus_color:         #{$dark_color_link_focus_color};
+        --color_link_focus_background:    #{$dark_color_link_focus_background};
         --color_footer_background:        #{$dark_color_footer_background};
         --color_footer_text:              #{$dark_color_footer_text};
         --color_page_header_text:         #{$dark_color_page_header_text};
@@ -155,8 +170,10 @@ footer {
 }
 
 pre code {
-    background-color: var(--color_secondary_background);
-    color: var(--color_text_code);
+  border: 2px solid transparent;
+  background: linear-gradient(var(--color_secondary_background_gradient), var(--color_secondary_background)) padding-box,
+              linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(255,255,255,0.05)) border-box;
+  color: var(--color_text_code);
 }
 
 article {
