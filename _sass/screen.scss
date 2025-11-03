@@ -30,6 +30,7 @@ body {
     font-family: $font_body;
     font-size: 14pt;
     margin: 0;
+    display: grid;
 }
 
 table { display: table; }
@@ -148,8 +149,6 @@ header#pageheader {
     left: 0px;
     right: 0px;
     min-height: 40px;
-    position: absolute;
-    //position: fixed;
     height: 30px;
     font-family: $font_code;
     font-size: 16px;
@@ -524,32 +523,36 @@ footer#pagefooter {
 
     &.social
     {
-        //margin: 0px;
-        li {
-            align: left;
-            height: 32px;
-            a {
-                padding: 4px 8px 4px 40px;
-                margin: 4px 0px 4px 0px;
-                background-repeat: no-repeat;
-                background-position: 8px center;
-                background-size: 24px 24px;
-                display: block;
+        ul {
+            display: grid;
+            grid-template-columns: auto auto;
 
-                &#mastodon {
-                    background-image: url(#{$path_logos}/mastodon/logo-purple.svg);
-                }
+            li {
+                align: left;
+                height: 32px;
+                a {
+                    padding: 4px 8px 4px 40px;
+                    margin: 4px 0px 4px 0px;
+                    background-repeat: no-repeat;
+                    background-position: 8px center;
+                    background-size: 24px 24px;
+                    display: block;
 
-                &#pixelfed {
-                    background-image: url(#{$path_logos}/pixelfed/icon.svg);
-                }
+                    &#mastodon {
+                        background-image: url(#{$path_logos}/mastodon/logo-purple.svg);
+                    }
 
-                &#github {
-                    background-image: url(#{$path_logos}/github/github-mark.svg);
-                }
+                    &#pixelfed {
+                        background-image: url(#{$path_logos}/pixelfed/icon.svg);
+                    }
 
-                &#flickr {
-                    background-image: url(#{$path_logos}/flickr/flickr.svg);
+                    &#github {
+                        background-image: url(#{$path_logos}/github/github-mark.svg);
+                    }
+
+                    &#flickr {
+                        background-image: url(#{$path_logos}/flickr/flickr.svg);
+                    }
                 }
             }
         }
