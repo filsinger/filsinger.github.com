@@ -67,6 +67,13 @@ jobs:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
+      - name: Exit if the branch is not master
+        run: |
+        if [[ "${{ github.ref }}" != "refs/heads/master" ]]; then
+          echo "Branch is not master, exiting."
+          exit 0
+        fi
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
