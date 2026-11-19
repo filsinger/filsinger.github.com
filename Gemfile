@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem "classifier-reborn", "~> 2.3"
 gem "jekyll", "~> 4.4"
 gem "jekyll-categories", "~> 0.0.2"
-gem "jekyll-feed", "~> 0.17.0"
+gem "jekyll-feed", "~> 0.18.0"
 gem "jekyll-seo-tag", "~> 2.9"
 gem "jekyll-sitemap", "~> 1.4"
 gem "kramdown", "~> 2.5"
