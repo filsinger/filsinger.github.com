@@ -16,7 +16,7 @@
     {% endif %}
 
     <meta name="keywords" content="{% for tag in page.tags %}{{tag}}, {% endfor %}{% for cat in page.categories %}{{cat}}, {% endfor %}jason, filsinger" />
-    <meta name="robots" content="noodp, noydir{% if page.noindex == true %}, noindex{% endif %}" />
+    <meta name="robots" content="noodp, noai, noimageai, noydir{% if page.noindex == true %}, noindex{% endif %}" />
     {% if page.noindex == true %}<meta name="googlebot" content="noarchive"/>{% endif %}
     {% if page.meta-description != null %}<meta name="description" content="{{ page.meta-description }}" />{% endif %}
     {% case page.license %}
